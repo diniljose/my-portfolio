@@ -1,0 +1,162 @@
+{
+  "profile": {
+    "slug": "sarah",
+    "firstName": "Sarah",
+    "lastName": "Chen",
+    "headline": "Creative Developer — React · Design Systems · WebGL",
+    "summary": "Creative developer with a passion for blending code and design. 4+ years building interactive web experiences, design systems, and creative tools. I specialize in making the web feel delightful, accessible, and performant.",
+    "location": "Berlin, Germany",
+    "availability": "busy",
+    "email": "sarah.chen@example.com",
+    "phone": "+49 170 1234567",
+    "socials": [
+      { "platform": "github", "url": "https://github.com/sarahchen", "label": "GitHub" },
+      { "platform": "linkedin", "url": "https://linkedin.com/in/sarahchen", "label": "LinkedIn" },
+      { "platform": "dribbble", "url": "https://dribbble.com/sarahchen", "label": "Dribbble" },
+      { "platform": "twitter", "url": "https://twitter.com/sarahchen_dev", "label": "Twitter" }
+    ],
+    "theme": "sunset"
+  },
+  "skills": [
+    { "name": "React", "category": "frontend", "level": 5, "tags": ["Next.js", "Hooks", "SSR"] },
+    { "name": "TypeScript", "category": "frontend", "level": 5, "tags": ["Generics", "Type safety"] },
+    { "name": "Three.js / WebGL", "category": "frontend", "level": 4, "tags": ["3D", "Shaders", "R3F"] },
+    { "name": "CSS / Tailwind", "category": "frontend", "level": 5, "tags": ["Animations", "Responsive"] },
+    { "name": "Figma", "category": "design", "level": 5, "tags": ["Design Systems", "Prototyping"] },
+    { "name": "Framer Motion", "category": "frontend", "level": 4, "tags": ["Animations", "Gestures"] },
+    { "name": "Node.js", "category": "backend", "level": 4, "tags": ["Express", "API"] },
+    { "name": "PostgreSQL", "category": "database", "level": 3, "tags": ["Prisma", "SQL"] },
+    { "name": "Docker", "category": "devops", "level": 3, "tags": ["Containers"] },
+    { "name": "Vercel", "category": "cloud", "level": 4, "tags": ["Edge Functions", "CI/CD"] },
+    { "name": "Storybook", "category": "tools", "level": 4, "tags": ["Component docs", "Testing"] },
+    { "name": "Playwright", "category": "testing", "level": 3, "tags": ["E2E", "Visual Regression"] }
+  ],
+  "experience": [
+    {
+      "id": "creative-studio",
+      "company": "Pixel & Code Studio",
+      "role": "Creative Developer",
+      "location": "Berlin, Germany",
+      "startDate": "2022-06-01",
+      "description": "Building interactive web experiences and design systems for global brands.",
+      "achievements": [
+        "Built award-winning interactive websites using React, Three.js, and GSAP.",
+        "Created a reusable design system used across 12+ client projects.",
+        "Optimized Core Web Vitals, achieving 95+ Lighthouse scores on all projects.",
+        "Mentored 3 junior developers in modern frontend practices."
+      ],
+      "technologies": ["React", "Next.js", "Three.js", "GSAP", "Tailwind CSS", "Storybook"]
+    },
+    {
+      "id": "fintech-startup",
+      "company": "NovaPay",
+      "role": "Frontend Engineer",
+      "location": "Munich, Germany",
+      "startDate": "2020-09-01",
+      "endDate": "2022-05-01",
+      "description": "Frontend development for a fintech startup building digital payment solutions.",
+      "achievements": [
+        "Developed the customer-facing dashboard used by 50,000+ users.",
+        "Implemented real-time payment tracking with WebSocket integration.",
+        "Reduced bundle size by 45% through code splitting and tree shaking.",
+        "Built accessibility-first components meeting WCAG 2.1 AA standards."
+      ],
+      "technologies": ["React", "TypeScript", "Redux", "Node.js", "PostgreSQL", "Docker"]
+    }
+  ],
+  "projects": [
+    {
+      "id": "immersive-gallery",
+      "slug": "immersive-gallery",
+      "title": "Immersive 3D Gallery",
+      "category": "Creative / WebGL",
+      "description": "An interactive 3D art gallery built with Three.js and React, featuring real-time lighting and physics.",
+      "role": "Creative Developer",
+      "techStack": ["React", "Three.js", "R3F", "GLSL", "Vercel"],
+      "highlights": [
+        "Real-time ray-traced lighting with custom GLSL shaders",
+        "Physics-based interactions using Rapier",
+        "Awwwards Honorable Mention 2024"
+      ],
+      "links": [
+        { "type": "live", "url": "https://example.com/gallery", "label": "Live Site" },
+        { "type": "github", "url": "https://github.com/sarahchen/gallery", "label": "Source Code" }
+      ],
+      "images": [],
+      "featured": true,
+      "startDate": "2023-09-01",
+      "endDate": "2024-01-01"
+    },
+    {
+      "id": "design-system",
+      "slug": "nova-design-system",
+      "title": "Nova Design System",
+      "category": "Design Systems",
+      "description": "A comprehensive design system with 80+ components, tokens, and Storybook documentation.",
+      "role": "Lead Developer",
+      "techStack": ["React", "TypeScript", "Storybook", "Tailwind CSS", "Radix UI"],
+      "highlights": [
+        "80+ accessible, composable components",
+        "Design token system with dark/light mode",
+        "Used across 12+ production projects",
+        "Full Storybook documentation with interaction tests"
+      ],
+      "links": [
+        { "type": "docs", "url": "https://example.com/nova-ds", "label": "Documentation" }
+      ],
+      "images": [],
+      "featured": true,
+      "startDate": "2022-08-01"
+    },
+    {
+      "id": "payment-dashboard",
+      "slug": "payment-dashboard",
+      "title": "NovaPay Dashboard",
+      "category": "Fintech",
+      "description": "Real-time payment tracking dashboard for 50,000+ users with WebSocket data streaming.",
+      "role": "Frontend Engineer",
+      "techStack": ["React", "TypeScript", "Redux", "D3.js", "WebSockets"],
+      "highlights": [
+        "Real-time payment tracking with sub-second updates",
+        "Interactive data visualizations with D3.js",
+        "45% reduction in bundle size"
+      ],
+      "links": [],
+      "images": [],
+      "featured": false,
+      "startDate": "2021-01-01",
+      "endDate": "2022-04-01"
+    }
+  ],
+  "education": [
+    {
+      "institution": "Technical University of Munich",
+      "degree": "Bachelor of Science",
+      "field": "Media Informatics",
+      "startDate": "2016",
+      "endDate": "2020",
+      "grade": "1.7 (German scale)",
+      "location": "Munich, Germany"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Google UX Design Professional Certificate",
+      "issuer": "Google / Coursera",
+      "date": "2022"
+    },
+    {
+      "name": "AWS Cloud Practitioner",
+      "issuer": "Amazon Web Services",
+      "date": "2023"
+    }
+  ],
+  "testimonials": [
+    {
+      "name": "Marcus Weber",
+      "role": "CTO",
+      "company": "NovaPay",
+      "quote": "Sarah's ability to combine beautiful design with solid engineering is rare. She elevated our entire frontend architecture."
+    }
+  ]
+}
