@@ -32,7 +32,7 @@ export class SearchService {
           title: p.title,
           subtitle: p.category + ' · ' + p.techStack.slice(0, 3).join(', '),
           route: `/p/${slug}/projects/${p.slug}`,
-          icon: '📦',
+          icon: 'project',
         });
       }
     });
@@ -49,7 +49,7 @@ export class SearchService {
           title: s.name,
           subtitle: s.category,
           route: `/p/${slug}/skills`,
-          icon: '⚡',
+          icon: 'skill',
         });
       }
     });
@@ -67,7 +67,7 @@ export class SearchService {
           title: e.role,
           subtitle: e.company,
           route: `/p/${slug}/experience`,
-          icon: '💼',
+          icon: 'experience',
         });
       }
     });

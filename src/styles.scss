@@ -1,7 +1,7 @@
 // ─── Design System: Global Styles ───────────────────────────────────────────
 // Apple-like minimal + Vercel-style precision. 2026 aesthetic.
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap');
 
 // ─── Reset ──────────────────────────────────────────────────────────────────
 
@@ -19,12 +19,22 @@ html {
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   background: var(--bg-primary);
   color: var(--text-primary);
   line-height: 1.7;
   transition: background 0.4s ease, color 0.3s ease;
   overflow-x: hidden;
+}
+
+// Display font for headings
+.font-display {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+// Mono font for code
+.font-mono, .text-mono {
+  font-family: 'Fira Code', 'JetBrains Mono', monospace;
 }
 
 a {
@@ -413,6 +423,17 @@ ul, ol {
   }
 }
 
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 @keyframes scaleIn {
   from {
     opacity: 0;
@@ -422,6 +443,93 @@ ul, ol {
     opacity: 1;
     transform: scale(1);
   }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(5deg); }
+}
+
+@keyframes floatReverse {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(20px) rotate(-5deg); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes glow {
+  0%, 100% { 
+    box-shadow: 0 0 20px var(--accent), 0 0 40px var(--accent), 0 0 60px transparent;
+    opacity: 0.8;
+  }
+  50% { 
+    box-shadow: 0 0 40px var(--accent), 0 0 80px var(--accent), 0 0 100px var(--accent);
+    opacity: 1;
+  }
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes rotateIn {
+  from {
+    opacity: 0;
+    transform: rotate(-10deg) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  0%, 50% { border-color: var(--accent); }
+  51%, 100% { border-color: transparent; }
+}
+
+@keyframes morphBlob {
+  0%, 100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+  25% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+  50% { border-radius: 50% 60% 30% 60% / 30% 60% 70% 40%; }
+  75% { border-radius: 60% 40% 60% 30% / 60% 30% 60% 40%; }
+}
+
+@keyframes orbit {
+  from { transform: rotate(0deg) translateX(100px) rotate(0deg); }
+  to { transform: rotate(360deg) translateX(100px) rotate(-360deg); }
+}
+
+@keyframes ripple {
+  0% { transform: scale(1); opacity: 0.4; }
+  100% { transform: scale(2.5); opacity: 0; }
 }
 
 .animate-fade-in-up {
@@ -439,11 +547,127 @@ ul, ol {
   opacity: 0;
 }
 
+.animate-slide-in-left {
+  animation: slideInLeft 0.5s ease forwards;
+  opacity: 0;
+}
+
+.animate-bounce-in {
+  animation: bounceIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  opacity: 0;
+}
+
+.animate-rotate-in {
+  animation: rotateIn 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  opacity: 0;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  opacity: 0;
+}
+
 // Stagger delays
-@for $i from 1 through 12 {
+@for $i from 1 through 20 {
   .stagger-#{$i} {
-    animation-delay: #{$i * 0.08}s;
+    animation-delay: #{$i * 0.06}s;
   }
+}
+
+// Floating elements
+.float-slow { animation: float 6s ease-in-out infinite; }
+.float-medium { animation: float 4s ease-in-out infinite; }
+.float-fast { animation: float 3s ease-in-out infinite; }
+.float-reverse { animation: floatReverse 5s ease-in-out infinite; }
+
+// Gradient text with animation
+.text-gradient-animated {
+  background: linear-gradient(
+    90deg, 
+    var(--accent) 0%, 
+    var(--accent-hover) 25%, 
+    var(--accent) 50%,
+    var(--accent-hover) 75%,
+    var(--accent) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s linear infinite;
+}
+
+// Morphing blob background
+.morph-blob {
+  animation: morphBlob 8s ease-in-out infinite;
+}
+
+// Glowing elements
+.glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+// Hover animations
+.hover-lift {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+  }
+}
+
+.hover-scale {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.hover-glow {
+  transition: box-shadow 0.3s ease;
+  &:hover {
+    box-shadow: 0 0 30px rgba(var(--accent-rgb), 0.3);
+  }
+}
+
+// 3D perspective card
+.card-3d {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.card-3d-inner {
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+// Magnetic hover effect helper
+.magnetic {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+// Reveal on scroll helper
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  &.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Particle canvas styles
+.particles-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
 }
 
 // ─── Scrollbar ──────────────────────────────────────────────────────────────
