@@ -115,7 +115,14 @@ import { Project } from '../../../core/models';
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: center;
       transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .card-image[src^="data:image/svg"] {
+      object-fit: contain;
+      background: #0f172a;
+      padding: 0;
     }
 
     .project-card:hover .card-image {

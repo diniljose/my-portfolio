@@ -3,11 +3,11 @@
     "slug": "dinil",
     "firstName": "Dinil",
     "lastName": "Jose",
-    "headline": "Software Engineer — Angular · NestJS · Cloud",
-    "summary": "Software Engineer with 5+ years of experience in Angular and NodeJS. I believe that well-written code forms the backbone of resilient applications. I'm constantly ensuring that each piece of code serves a purpose, focusing on clean, secure, and scalable solutions that adapt and grow with ease. Enthusiastic to join a dynamic team to leverage expertise and drive business growth through innovative solutions.",
+    "headline": "Sr. Software Engineer — Full Stack · Angular · NestJS · AWS",
+    "summary": "Impact-driven Senior Software Engineer with 5+ years of experience delivering scalable, secure, and high-performance web applications across GovTech, Healthcare AI, and FinTech domains. Strong expertise in Angular and Node.js, building modern frontend interfaces and architecting robust full-stack, enterprise-grade solutions. Experienced in microservices architecture, REST/SOAP integrations, real-time systems, and cloud-native deployments on AWS. Committed to writing clean, maintainable, and secure code, driving continuous improvements in performance, system reliability, and deployment speed through robust CI/CD practices.",
     "location": "Kuwait",
     "availability": "available",
-    "email": "diniljose@example.com",
+    "email": "josedinil.jd@gmail.com",
     "phone": "+919747899193",
     "dob": "1995-12-25",
     "gender": "Male",
@@ -19,7 +19,7 @@
       },
       {
         "platform": "whatsapp",
-        "url": "https://wa.me/+919747899193",
+        "url": "https://wa.me/+96594987799",
         "label": "WhatsApp"
       },
       {
@@ -33,103 +33,109 @@
   "skills": [
     { "name": "Angular", "category": "frontend", "level": 5, "tags": ["Angular 13-18", "Standalone", "SSR", "Signals"] },
     { "name": "TypeScript", "category": "frontend", "level": 5, "tags": ["ES6+", "Strict mode"] },
-    { "name": "JavaScript", "category": "frontend", "level": 5, "tags": ["ES6+", "DOM", "Async"] },
-    { "name": "HTML5", "category": "frontend", "level": 5, "tags": ["Semantic", "Accessibility"] },
-    { "name": "CSS3 / SCSS", "category": "frontend", "level": 5, "tags": ["Flexbox", "Grid", "Animations"] },
-    { "name": "RxJS", "category": "frontend", "level": 4, "tags": ["Operators", "Subjects", "Observables"] },
+    { "name": "RxJS", "category": "frontend", "level": 5, "tags": ["Operators", "Subjects", "Observables"] },
     { "name": "NgRx", "category": "frontend", "level": 4, "tags": ["Store", "Effects", "Selectors"] },
-    { "name": "Angular Material", "category": "frontend", "level": 4, "tags": ["Components", "Theming"] },
-    { "name": "Bootstrap", "category": "frontend", "level": 4, "tags": ["Responsive", "Grid"] },
+    { "name": "HTML5", "category": "frontend", "level": 5, "tags": ["Semantic", "Accessibility"] },
+    { "name": "SCSS", "category": "frontend", "level": 5, "tags": ["Flexbox", "Grid", "Animations"] },
     { "name": "Tailwind CSS", "category": "frontend", "level": 4, "tags": ["Utility-first", "JIT"] },
-    { "name": "Figma", "category": "design", "level": 3, "tags": ["UI/UX", "Prototyping"] },
-    { "name": "Node.js", "category": "backend", "level": 5, "tags": ["Express", "REST", "Middleware"] },
+    { "name": "Bootstrap", "category": "frontend", "level": 4, "tags": ["Responsive", "Grid"] },
+    { "name": "Node.js", "category": "backend", "level": 5, "tags": ["Runtime", "REST", "Middleware"] },
     { "name": "NestJS", "category": "backend", "level": 5, "tags": ["Modules", "Guards", "Pipes", "Interceptors"] },
-    { "name": "MongoDB", "category": "database", "level": 4, "tags": ["Mongoose", "Aggregation", "Indexing"] },
-    { "name": "PostgreSQL", "category": "database", "level": 4, "tags": ["TypeORM", "Queries", "Relations"] },
-    { "name": "MSSQL", "category": "database", "level": 3, "tags": ["T-SQL"] },
-    { "name": "AWS", "category": "cloud", "level": 4, "tags": ["EC2", "RDS", "S3", "Load Balancing", "Auto-scaling"] },
-    { "name": "Docker", "category": "devops", "level": 4, "tags": ["Containers", "Compose"] },
-    { "name": "GitLab CI/CD", "category": "devops", "level": 4, "tags": ["Pipelines", "Runners"] },
-    { "name": "Jenkins", "category": "devops", "level": 3, "tags": ["Build", "Deploy"] },
-    { "name": "Git", "category": "tools", "level": 5, "tags": ["GitHub", "GitLab", "Branching"] },
-    { "name": "Jira", "category": "tools", "level": 4, "tags": ["Agile", "Scrum", "Sprint Planning"] },
-    { "name": "Jasmine", "category": "testing", "level": 4, "tags": ["Unit Tests", "Specs"] },
-    { "name": "Karma", "category": "testing", "level": 4, "tags": ["Test Runner"] },
-    { "name": "Jest", "category": "testing", "level": 3, "tags": ["Unit Tests", "Mocking"] },
-    { "name": "JMeter", "category": "testing", "level": 3, "tags": ["Load Testing", "Performance"] },
+    { "name": "Express.js", "category": "backend", "level": 4, "tags": ["Routing", "Middleware"] },
     { "name": "RESTful APIs", "category": "backend", "level": 5, "tags": ["Design", "Integration"] },
+    { "name": "GraphQL", "category": "backend", "level": 4, "tags": ["Queries", "Mutations", "Resolvers"] },
     { "name": "WebSockets", "category": "backend", "level": 4, "tags": ["Real-time", "Socket.IO"] },
-    { "name": "SOAP APIs", "category": "backend", "level": 4, "tags": ["XML", "WSDL", "Integration"] }
+    { "name": "SOAP APIs", "category": "backend", "level": 4, "tags": ["XML", "WSDL", "Integration"] },
+    { "name": "PostgreSQL", "category": "database", "level": 4, "tags": ["TypeORM", "Queries", "Relations"] },
+    { "name": "MongoDB", "category": "database", "level": 4, "tags": ["Mongoose", "Aggregation", "Indexing"] },
+    { "name": "Redis", "category": "database", "level": 3, "tags": ["Caching", "Pub/Sub"] },
+    { "name": "AWS", "category": "cloud", "level": 4, "tags": ["EC2", "S3", "RDS", "Lambda", "CloudFront"] },
+    { "name": "Docker", "category": "devops", "level": 4, "tags": ["Containers", "Compose"] },
+    { "name": "Kubernetes", "category": "devops", "level": 3, "tags": ["Orchestration", "Pods", "Services"] },
+    { "name": "Nginx", "category": "devops", "level": 3, "tags": ["Reverse Proxy", "Load Balancing"] },
+    { "name": "Linux", "category": "devops", "level": 4, "tags": ["Shell", "Administration"] },
+    { "name": "GitHub Actions", "category": "devops", "level": 4, "tags": ["Workflows", "Automation"] },
+    { "name": "Jenkins", "category": "devops", "level": 3, "tags": ["Build", "Deploy"] },
+    { "name": "GitLab CI/CD", "category": "devops", "level": 4, "tags": ["Pipelines", "Runners"] },
+    { "name": "Jest", "category": "testing", "level": 4, "tags": ["Unit Tests", "Mocking"] },
+    { "name": "Jasmine", "category": "testing", "level": 4, "tags": ["Unit Tests", "Specs"] },
+    { "name": "Cypress", "category": "testing", "level": 4, "tags": ["E2E Testing", "Integration"] },
+    { "name": "JMeter", "category": "testing", "level": 3, "tags": ["Load Testing", "Performance"] },
+    { "name": "Postman", "category": "testing", "level": 4, "tags": ["API Testing", "Collections"] },
+    { "name": "Git", "category": "tools", "level": 5, "tags": ["GitHub", "GitLab", "Branching"] },
+    { "name": "Jira", "category": "tools", "level": 4, "tags": ["Agile", "Scrum", "Sprint Planning"] }
   ],
   "experience": [
     {
       "id": "ebla",
       "company": "EBLA Computer Consultancy (Ministry of Interior)",
-      "role": "Software Engineer",
+      "role": "Sr. Software Engineer",
       "location": "Kuwait",
-      "startDate": "2024-01-01",
+      "startDate": "2024-03-01",
       "endDate": null,
-      "description": "Developing and optimizing enterprise-level government applications for Kuwait's Ministry of Interior.",
+      "description": "Architecting, building, and deploying scalable end-to-end applications for Kuwait's Ministry of Interior, delivering high-quality features on schedule while upholding strong engineering standards.",
       "achievements": [
-        "Developed & optimized enterprise-level government applications using Angular, NestJS, and MongoDB, ensuring scalability & security.",
-        "Integrated real-time WebSockets, REST APIs, and SOAP APIs enabling real-time data processing in applications.",
-        "Architected backend solutions, improving database performance by 30% via indexing, caching, and query optimization.",
-        "Implemented secure authentication & authorization mechanisms using OAuth, JWT, and role-based access controls.",
-        "Collaborated with cross-functional teams, delivering high-performance software aligned with government standards."
+        "Developed Kuwait's national E-Visa platform using Angular 18, NestJS, and MongoDB, boosting digital visa processing speed and reliability for enterprise-scale government applications.",
+        "Architected microservice-based backends with optimized queries, indexing, caching, and real-time WebSocket synchronization, delivering 30% performance gains across REST and SOAP services.",
+        "Implemented robust security using OAuth2, JWT, and RBAC for multi-tier access control in high-availability systems.",
+        "Mapped client and business requirements, providing customized software solutions involving finalization of product specifications and selection of appropriate techniques.",
+        "Partnered effectively in Agile Scrum teams to deliver scalable, secure production releases aligned with government standards.",
+        "Supported seamless releases by maintaining CI/CD pipelines and ensuring production stability."
       ],
-      "technologies": ["Angular 18", "NestJS", "MongoDB", "WebSockets", "SOAP", "JWT", "OAuth"]
+      "technologies": ["Angular 18", "NestJS", "MongoDB", "WebSockets", "SOAP", "JWT", "OAuth2", "RBAC", "Docker"]
     },
     {
       "id": "fedo",
-      "company": "FEDO.AI",
+      "company": "fedo.ai",
       "role": "Software Engineer",
       "location": "Bengaluru, India",
-      "startDate": "2020-01-01",
-      "endDate": "2024-01-01",
-      "description": "Full-stack development of AI-powered healthcare and fintech applications.",
+      "startDate": "2020-09-01",
+      "endDate": "2024-01-31",
+      "description": "Full-stack development of AI-powered healthcare and fintech applications, building responsive Angular applications and designing optimized APIs.",
       "achievements": [
-        "Developed dynamic and responsive web applications using Angular, HTML5, CSS3, and JavaScript (ES6+).",
-        "Boosted frontend performance by 40% using code splitting, lazy loading, tree shaking, and efficient state management (NgRx, RxJS).",
-        "Designed & optimized RESTful APIs with NestJS & MongoDB, improving data processing speed by 25%.",
-        "Implemented robust security protocols, encryption, and data protection measures.",
-        "Enhanced code reliability through unit & integration testing (Jasmine, Karma), reducing bugs by 30%.",
-        "Integrated AWS cloud services (EC2, RDS, S3, Load Balancers) & automated CI/CD pipelines, cutting deployment time by 40%.",
-        "Worked in Agile teams, contributing to sprint planning, daily standups, and retrospectives via Jira."
+        "Built responsive Angular applications with NgRx, RxJS, HTML5, CSS3, and ES6+ JavaScript; enhanced load times by 40% via lazy loading, code splitting, tree shaking, and state management.",
+        "Designed and optimized RESTful and GraphQL APIs using NestJS and MongoDB, cutting response latency by 25%.",
+        "Automated CI/CD pipelines with GitLab, Jenkins, Docker & AWS (EC2, S3, RDS, Load Balancers), accelerating releases by 40% with safer rollbacks.",
+        "Boosted reliability through comprehensive unit, integration, and E2E testing (Jest, Jasmine, Karma, Cypress), reducing bugs by 30%.",
+        "Implemented robust security protocols, encryption, and data protection in Agile teams using Jira for sprint planning, standups, and retrospectives."
       ],
-      "technologies": ["Angular 16", "NestJS", "PostgreSQL", "MongoDB", "NgRx", "RxJS", "AWS", "Docker", "CI/CD"]
+      "technologies": ["Angular 16", "NestJS", "PostgreSQL", "MongoDB", "NgRx", "RxJS", "GraphQL", "AWS", "Docker", "CI/CD", "Jest", "Cypress"]
     }
   ],
   "projects": [
     {
       "id": "evisa",
       "slug": "evisa-portal",
-      "title": "E-Visa Portal & Back Office",
-      "category": "Government & E-Governance",
-      "description": "Kuwait's official E-Visa application platform enabling secure & real-time visa processing for the Ministry of Interior.",
-      "role": "Lead Frontend Engineer",
-      "techStack": ["Angular 18", "NestJS", "SSR", "Hydration"],
+      "title": "E-Visa Platform (GovTech)",
+      "category": "GovTech",
+      "thumbnail": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 340' fill='none'%3E%3Crect width='600' height='340' fill='%230f172a'/%3E%3Crect x='60' y='40' width='200' height='140' rx='12' fill='%231e293b' stroke='%236366f1' stroke-width='2'/%3E%3Crect x='80' y='64' width='44' height='52' rx='6' fill='%23334155'/%3E%3Crect x='136' y='64' width='100' height='10' rx='5' fill='%236366f1' opacity='.5'/%3E%3Crect x='136' y='82' width='80' height='8' rx='4' fill='%23475569'/%3E%3Crect x='136' y='98' width='90' height='8' rx='4' fill='%23475569'/%3E%3Crect x='80' y='134' width='156' height='12' rx='3' fill='%23334155'/%3E%3Crect x='80' y='154' width='156' height='12' rx='3' fill='%23334155'/%3E%3Cpath d='M290 110h60' stroke='%23475569' stroke-width='2' stroke-dasharray='6 4'/%3E%3Cpolygon points='350,104 360,110 350,116' fill='%236366f1'/%3E%3Crect x='370' y='50' width='170' height='130' rx='12' fill='%231e293b' stroke='%2310b981' stroke-width='2'/%3E%3Ccircle cx='455' cy='95' r='28' fill='%23064e3b'/%3E%3Cpath d='M442 95l8 8 18-18' stroke='%2310b981' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Crect x='405' y='138' width='100' height='10' rx='5' fill='%2310b981' opacity='.3'/%3E%3Crect x='420' y='155' width='70' height='8' rx='4' fill='%2310b981' opacity='.2'/%3E%3Crect x='80' y='220' width='440' height='70' rx='12' fill='%231e293b'/%3E%3Ccircle cx='130' cy='255' r='16' fill='%236366f1' opacity='.25'/%3E%3Cpath d='M152 255h56' stroke='%23475569' stroke-width='2'/%3E%3Ccircle cx='224' cy='255' r='16' fill='%236366f1' opacity='.45'/%3E%3Cpath d='M246 255h56' stroke='%23475569' stroke-width='2'/%3E%3Ccircle cx='318' cy='255' r='16' fill='%236366f1' opacity='.65'/%3E%3Cpath d='M340 255h56' stroke='%23475569' stroke-width='2'/%3E%3Ccircle cx='412' cy='255' r='16' fill='%2310b981'/%3E%3Cpath d='M405 255l5 5 10-10' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E",
+      "description": "Developed Kuwait's official E-Visa platform using Angular SSR with Hydration and NestJS microservices, enabling secure, real-time visa processing and payment integration.",
+      "role": "Lead Full Stack Engineer",
+      "techStack": ["Angular 18", "NestJS", "MongoDB", "SSR", "Hydration", "WebSocket", "OAuth2"],
       "highlights": [
-        "Developed Kuwait's official E-Visa application platform, enabling secure & real-time visa processing.",
-        "Implemented Angular SSR & Hydration for optimal performance and SEO.",
-        "Built automated backend workflows for application approvals, optimizing government efficiency."
+        "Developed Kuwait's official E-Visa platform using Angular SSR with Hydration and NestJS microservices, enabling secure, real-time visa processing and payment integration.",
+        "Architected the full database schema and automated backend approval workflows, ensuring scalability, compliance, and enhanced government operational efficiency.",
+        "Implemented real-time status tracking with WebSocket integration and role-based access control with OAuth 2.0 and JWT."
       ],
       "links": [],
       "images": [],
       "featured": true,
-      "caseStudy": "## Overview\n\nThe E-Visa Portal is Kuwait's official platform for processing visa applications digitally. This system replaced the legacy paper-based workflow with a modern, secure, and scalable digital solution.\n\n## Challenges\n\n- Legacy system with no real-time processing\n- High volume of concurrent applications\n- Strict government security requirements\n- Need for multi-language support (Arabic/English)\n\n## Solution\n\n- Built with Angular 18 using SSR and Hydration for SEO and performance\n- Real-time status tracking with WebSocket integration\n- Role-based access control with OAuth 2.0 and JWT\n- Automated workflow engine for application routing and approvals\n\n## Results\n\n- **60%** reduction in processing time\n- **99.9%** uptime since launch\n- Handles 10,000+ daily applications",
-      "startDate": "2024-02-01"
+      "caseStudy": "## Overview\n\nThe E-Visa Platform is Kuwait's official system for processing visa applications digitally. This system replaced the legacy paper-based workflow with a modern, secure, and scalable digital solution.\n\n## Challenges\n\n- Legacy system with no real-time processing\n- High volume of concurrent applications\n- Strict government security requirements\n- Need for multi-language support (Arabic/English)\n\n## Solution\n\n- Built with Angular 18 using SSR and Hydration for SEO and performance\n- Real-time status tracking with WebSocket integration\n- Role-based access control with OAuth 2.0 and JWT\n- Automated workflow engine for application routing and approvals\n- Full database schema design with optimized indexing\n\n## Results\n\n- **60%** reduction in processing time\n- **99.9%** uptime since launch\n- Handles 10,000+ daily applications\n- Secure, real-time visa processing with automated approvals",
+      "startDate": "2024-03-01"
     },
     {
       "id": "dms",
       "slug": "document-management-system",
-      "title": "DMS (Document Management System)",
-      "category": "Government & E-Governance",
-      "description": "Modular document management system for government agencies with OCR-based document recognition and workflow automation.",
+      "title": "Document Management System",
+      "category": "GovTech",
+      "thumbnail": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 340' fill='none'%3E%3Crect width='600' height='340' fill='%230f172a'/%3E%3Crect x='50' y='35' width='140' height='270' rx='10' fill='%231e293b' stroke='%23475569' stroke-width='1.5'/%3E%3Crect x='68' y='60' width='28' height='24' rx='5' fill='%236366f1' opacity='.3'/%3E%3Crect x='68' y='96' width='28' height='24' rx='5' fill='%236366f1' opacity='.5'/%3E%3Crect x='68' y='132' width='28' height='24' rx='5' fill='%2310b981' opacity='.5'/%3E%3Crect x='104' y='64' width='68' height='8' rx='4' fill='%23475569'/%3E%3Crect x='104' y='78' width='50' height='6' rx='3' fill='%23334155'/%3E%3Crect x='104' y='100' width='68' height='8' rx='4' fill='%23475569'/%3E%3Crect x='104' y='114' width='50' height='6' rx='3' fill='%23334155'/%3E%3Crect x='104' y='136' width='68' height='8' rx='4' fill='%23475569'/%3E%3Crect x='104' y='150' width='50' height='6' rx='3' fill='%23334155'/%3E%3Crect x='68' y='175' width='104' height='8' rx='4' fill='%23334155'/%3E%3Crect x='68' y='195' width='104' height='8' rx='4' fill='%23334155'/%3E%3Crect x='68' y='215' width='80' height='8' rx='4' fill='%23334155'/%3E%3Crect x='220' y='35' width='330' height='175' rx='10' fill='%231e293b' stroke='%23475569' stroke-width='1.5'/%3E%3Crect x='242' y='58' width='120' height='130' rx='6' fill='%23334155'/%3E%3Crect x='258' y='78' width='88' height='10' rx='4' fill='%23475569'/%3E%3Crect x='258' y='96' width='68' height='8' rx='3' fill='%23475569'/%3E%3Crect x='258' y='112' width='78' height='8' rx='3' fill='%23475569'/%3E%3Crect x='258' y='128' width='60' height='8' rx='3' fill='%23475569'/%3E%3Crect x='258' y='144' width='72' height='8' rx='3' fill='%23475569'/%3E%3Crect x='258' y='160' width='50' height='8' rx='3' fill='%23475569'/%3E%3Crect x='385' y='58' width='140' height='130' rx='6' fill='%23064e3b'/%3E%3Cpath d='M410 90h90M410 110h70M410 130h80M410 150h60' stroke='%2310b981' opacity='.4' stroke-width='6' stroke-linecap='round'/%3E%3Crect x='400' y='74' width='16' height='16' rx='3' fill='%2310b981' opacity='.6'/%3E%3Cpath d='M405 82l3 3 6-6' stroke='%23fff' stroke-width='1.5' stroke-linecap='round'/%3E%3Crect x='220' y='230' width='330' height='75' rx='10' fill='%231e293b'/%3E%3Crect x='245' y='250' width='120' height='14' rx='7' fill='%23334155'/%3E%3Crect x='245' y='250' width='72' height='14' rx='7' fill='%236366f1' opacity='.6'/%3E%3Crect x='390' y='250' width='120' height='14' rx='7' fill='%23334155'/%3E%3Crect x='390' y='250' width='96' height='14' rx='7' fill='%2310b981' opacity='.5'/%3E%3C/svg%3E",
+      "description": "Built a modular DMS with optimized storage reducing data redundancy by 40%, integrating OCR-based recognition to accelerate document retrieval and workflow automation.",
       "role": "Full Stack Developer",
       "techStack": ["Angular", "NestJS", "MongoDB", "OCR"],
       "highlights": [
-        "Developed a modular document management system, reducing data redundancy by 40% through optimized storage.",
-        "Implemented OCR-based document recognition, accelerating retrieval speed & workflow automation across projects."
+        "Built a modular DMS with optimized storage reducing data redundancy by 40%.",
+        "Integrated OCR-based recognition to accelerate document retrieval and workflow automation.",
+        "Modular architecture enabling efficient document management across government agencies."
       ],
       "links": [],
       "images": [],
@@ -139,14 +145,16 @@
     {
       "id": "middleware",
       "slug": "middleware-services",
-      "title": "Middleware Services",
-      "category": "Government & E-Governance",
-      "description": "Enterprise-grade middleware enabling seamless integration with SOAP APIs for cross-agency government systems.",
+      "title": "Enterprise Middleware Services",
+      "category": "GovTech",
+      "thumbnail": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 340' fill='none'%3E%3Crect width='600' height='340' fill='%230f172a'/%3E%3Crect x='40' y='60' width='140' height='220' rx='12' fill='%231e293b' stroke='%236366f1' stroke-width='2'/%3E%3Crect x='60' y='85' width='100' height='12' rx='6' fill='%23334155'/%3E%3Crect x='60' y='107' width='80' height='10' rx='5' fill='%23334155'/%3E%3Crect x='60' y='127' width='90' height='10' rx='5' fill='%23334155'/%3E%3Crect x='60' y='147' width='70' height='10' rx='5' fill='%23334155'/%3E%3Ccircle cx='110' cy='210' r='24' fill='%236366f1' opacity='.15'/%3E%3Cpath d='M98 210l8 8 16-16' stroke='%236366f1' stroke-width='2.5' stroke-linecap='round'/%3E%3Cpath d='M180 130h70' stroke='%236366f1' stroke-width='2' stroke-dasharray='8 4'/%3E%3Cpolygon points='250,124 260,130 250,136' fill='%236366f1'/%3E%3Crect x='230' y='50' width='140' height='240' rx='14' fill='%23312e81' stroke='%236366f1' stroke-width='2.5'/%3E%3Ccircle cx='300' cy='120' r='30' fill='%236366f1' opacity='.2'/%3E%3Cpath d='M284 120h32M300 104v32' stroke='%236366f1' stroke-width='2.5' stroke-linecap='round'/%3E%3Crect x='252' y='170' width='96' height='8' rx='4' fill='%236366f1' opacity='.3'/%3E%3Crect x='252' y='188' width='96' height='8' rx='4' fill='%236366f1' opacity='.25'/%3E%3Crect x='252' y='206' width='96' height='8' rx='4' fill='%236366f1' opacity='.2'/%3E%3Crect x='252' y='224' width='96' height='8' rx='4' fill='%236366f1' opacity='.15'/%3E%3Ccircle cx='270' cy='258' r='6' fill='%2310b981'/%3E%3Ccircle cx='292' cy='258' r='6' fill='%2310b981'/%3E%3Ccircle cx='314' cy='258' r='6' fill='%23f59e0b'/%3E%3Ccircle cx='336' cy='258' r='6' fill='%2310b981'/%3E%3Cpath d='M370 130h70' stroke='%2310b981' stroke-width='2' stroke-dasharray='8 4'/%3E%3Cpolygon points='440,124 450,130 440,136' fill='%2310b981'/%3E%3Crect x='420' y='60' width='140' height='220' rx='12' fill='%231e293b' stroke='%2310b981' stroke-width='2'/%3E%3Crect x='440' y='85' width='100' height='12' rx='6' fill='%23334155'/%3E%3Crect x='440' y='107' width='80' height='10' rx='5' fill='%23334155'/%3E%3Crect x='440' y='127' width='90' height='10' rx='5' fill='%23334155'/%3E%3Crect x='440' y='147' width='70' height='10' rx='5' fill='%23334155'/%3E%3Ccircle cx='490' cy='210' r='24' fill='%2310b981' opacity='.15'/%3E%3Cpath d='M478 210l8 8 16-16' stroke='%2310b981' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E",
+      "description": "Engineered enterprise-grade NestJS middleware enabling secure SOAP API integrations for seamless data exchange across multiple government agencies and external organizations.",
       "role": "Backend Developer",
       "techStack": ["NestJS", "SOAP APIs", "XML", "Security"],
       "highlights": [
-        "Built an enterprise-grade middleware in NestJS, enabling seamless integration with SOAP APIs for government systems.",
-        "Ensured secure data exchange across multiple government agencies & external organizations."
+        "Engineered enterprise-grade NestJS middleware enabling secure SOAP API integrations for government systems.",
+        "Ensured secure data exchange across multiple government agencies and external organizations.",
+        "Enabled seamless inter-agency system integration with secure SOAP middleware."
       ],
       "links": [],
       "images": [],
@@ -154,35 +162,58 @@
       "startDate": "2024-03-01"
     },
     {
+      "id": "police-exam",
+      "slug": "police-exam-system",
+      "title": "Police Examination System",
+      "category": "GovTech",
+      "thumbnail": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 340' fill='none'%3E%3Crect width='600' height='340' fill='%230f172a'/%3E%3Crect x='50' y='30' width='320' height='280' rx='12' fill='%231e293b' stroke='%23475569' stroke-width='1.5'/%3E%3Crect x='72' y='55' width='276' height='30' rx='6' fill='%23334155'/%3E%3Crect x='102' y='64' width='50' height='12' rx='6' fill='%236366f1' opacity='.4'/%3E%3Crect x='72' y='100' width='276' height='28' rx='6' fill='%23334155'/%3E%3Ccircle cx='90' cy='114' r='8' stroke='%23475569' stroke-width='2' fill='none'/%3E%3Crect x='108' y='108' width='100' height='12' rx='4' fill='%23475569'/%3E%3Crect x='72' y='140' width='276' height='28' rx='6' fill='%23064e3b' stroke='%2310b981' stroke-width='1.5'/%3E%3Ccircle cx='90' cy='154' r='8' fill='%2310b981'/%3E%3Cpath d='M86 154l3 3 6-6' stroke='%23fff' stroke-width='1.5' stroke-linecap='round'/%3E%3Crect x='108' y='148' width='100' height='12' rx='4' fill='%2310b981' opacity='.3'/%3E%3Crect x='72' y='180' width='276' height='28' rx='6' fill='%23334155'/%3E%3Ccircle cx='90' cy='194' r='8' stroke='%23475569' stroke-width='2' fill='none'/%3E%3Crect x='108' y='188' width='100' height='12' rx='4' fill='%23475569'/%3E%3Crect x='72' y='220' width='276' height='28' rx='6' fill='%23334155'/%3E%3Ccircle cx='90' cy='234' r='8' stroke='%23475569' stroke-width='2' fill='none'/%3E%3Crect x='108' y='228' width='100' height='12' rx='4' fill='%23475569'/%3E%3Crect x='72' y='264' width='124' height='24' rx='8' fill='%236366f1'/%3E%3Crect x='206' y='264' width='54' height='24' rx='8' fill='%23334155'/%3E%3Crect x='420' y='30' width='140' height='140' rx='12' fill='%231e293b' stroke='%2310b981' stroke-width='2'/%3E%3Ccircle cx='490' cy='90' r='40' fill='none' stroke='%23334155' stroke-width='6'/%3E%3Ccircle cx='490' cy='90' r='40' fill='none' stroke='%2310b981' stroke-width='6' stroke-dasharray='200 52' stroke-linecap='round' transform='rotate(-90 490 90)'/%3E%3Ccircle cx='490' cy='90' r='20' fill='%2310b981' opacity='.1'/%3E%3Crect x='420' y='190' width='140' height='120' rx='12' fill='%231e293b'/%3E%3Ccircle cx='450' cy='220' r='8' fill='%2310b981'/%3E%3Ccircle cx='474' cy='220' r='8' fill='%2310b981'/%3E%3Ccircle cx='498' cy='220' r='8' fill='%236366f1'/%3E%3Ccircle cx='522' cy='220' r='8' fill='%23475569'/%3E%3Ccircle cx='546' cy='220' r='8' fill='%23f59e0b'/%3E%3Ccircle cx='450' cy='248' r='8' fill='%2310b981'/%3E%3Ccircle cx='474' cy='248' r='8' fill='%23475569'/%3E%3Ccircle cx='498' cy='248' r='8' fill='%2310b981'/%3E%3Ccircle cx='522' cy='248' r='8' fill='%2310b981'/%3E%3Ccircle cx='546' cy='248' r='8' fill='%2310b981'/%3E%3Crect x='432' y='270' width='60' height='8' rx='4' fill='%23f59e0b' opacity='.4'/%3E%3Crect x='500' y='270' width='52' height='8' rx='4' fill='%23475569'/%3E%3C/svg%3E",
+      "description": "Developed a secure online examination platform with real-time evaluation, automated scoring, and a responsive admin dashboard for monitoring exams and tracking candidate performance.",
+      "role": "Full Stack Developer",
+      "techStack": ["Angular", "NestJS", "MongoDB"],
+      "highlights": [
+        "Developed a secure online examination platform with real-time evaluation and automated scoring.",
+        "Built a responsive admin dashboard for monitoring exams and tracking candidate performance.",
+        "Implemented real-time scoring and candidate tracking for police recruitment."
+      ],
+      "links": [],
+      "images": [],
+      "featured": false,
+      "startDate": "2024-04-01"
+    },
+    {
       "id": "fedo-vitals",
       "slug": "fedo-vitals",
-      "title": "Fedo Vitals",
+      "title": "Healthcare AI Platform (Fedo Vitals)",
       "category": "Healthcare & AI",
-      "description": "Real-time video-based vital sign detection system using WebRTC and AI-powered face recognition for health analysis.",
+      "thumbnail": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 340' fill='none'%3E%3Crect width='600' height='340' fill='%230f172a'/%3E%3Crect x='60' y='30' width='240' height='280' rx='12' fill='%231e293b' stroke='%236366f1' stroke-width='2'/%3E%3Cellipse cx='180' cy='120' rx='55' ry='65' fill='%23334155'/%3E%3Ccircle cx='160' cy='108' r='7' fill='%236366f1' opacity='.6'/%3E%3Ccircle cx='200' cy='108' r='7' fill='%236366f1' opacity='.6'/%3E%3Cpath d='M160 138c0 0 10 12 20 12s20-12 20-12' stroke='%236366f1' opacity='.4' stroke-width='2' fill='none'/%3E%3Crect x='100' y='55' width='160' height='135' rx='8' fill='none' stroke='%2310b981' stroke-width='2.5' stroke-dasharray='8 4'/%3E%3Cpath d='M108 60l-14-14M252 60l14-14M108 185l-14 14M252 185l14 14' stroke='%2310b981' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M80 240h200' stroke='%23334155' stroke-width='1.5'/%3E%3Cpath d='M90 240l16 0l6-16l10 32l10-24l8 16l6-12l12 0l6-10l10 20l8-12l6 8l16 0' stroke='%2310b981' stroke-width='2.5' fill='none'/%3E%3Crect x='80' y='264' width='180' height='28' rx='8' fill='%2310b981' opacity='.1'/%3E%3Ccircle cx='100' cy='278' r='8' fill='%2310b981' opacity='.4'/%3E%3Crect x='340' y='30' width='210' height='84' rx='10' fill='%231e293b' stroke='%23ef4444' stroke-width='1.5'/%3E%3Cpath d='M375 60l6 5.2a16 16 0 0 0 22.4 0L410 60a16 16 0 0 1 22.4 0l6.6 5.2' stroke='%23ef4444' stroke-width='2.5' fill='none'/%3E%3Ccircle cx='520' cy='72' r='18' fill='%23ef4444' opacity='.15'/%3E%3Crect x='504' y='64' width='32' height='6' rx='3' fill='%23ef4444' opacity='.5'/%3E%3Crect x='510' y='74' width='20' height='5' rx='2.5' fill='%23ef4444' opacity='.3'/%3E%3Crect x='340' y='130' width='210' height='84' rx='10' fill='%231e293b' stroke='%236366f1' stroke-width='1.5'/%3E%3Ccircle cx='390' cy='172' r='22' fill='none' stroke='%236366f1' stroke-width='4'/%3E%3Ccircle cx='390' cy='172' r='22' fill='none' stroke='%236366f1' stroke-width='4' stroke-dasharray='120 19' stroke-linecap='round' transform='rotate(-90 390 172)'/%3E%3Crect x='430' y='156' width='100' height='8' rx='4' fill='%236366f1' opacity='.3'/%3E%3Crect x='430' y='172' width='70' height='6' rx='3' fill='%23475569'/%3E%3Crect x='340' y='230' width='210' height='80' rx='10' fill='%231e293b' stroke='%23f59e0b' stroke-width='1.5'/%3E%3Crect x='365' y='252' width='40' height='36' rx='6' fill='%23f59e0b' opacity='.15'/%3E%3Cpath d='M378 264v12M385 270h-14' stroke='%23f59e0b' stroke-width='2' stroke-linecap='round'/%3E%3Crect x='420' y='256' width='100' height='8' rx='4' fill='%23f59e0b' opacity='.3'/%3E%3Crect x='420' y='272' width='70' height='6' rx='3' fill='%23475569'/%3E%3C/svg%3E",
+      "description": "Developed a real-time WebRTC-based vital signs detection platform using Angular, WebSockets, and backend APIs, enabling AI-driven face recognition and health parameter estimation from live video streams.",
       "role": "Frontend Engineer",
-      "techStack": ["Angular 16", "Python 3.6", "PostgreSQL", "WebRTC", "AI"],
+      "techStack": ["Angular", "WebRTC", "WebSockets", "AI/ML", "PostgreSQL"],
       "highlights": [
-        "Built a real-time video-based vital sign detection system with WebRTC & AI-powered face recognition.",
-        "Optimized video streaming & AI inference, reducing processing time by 30% for real-time health analysis."
+        "Developed a real-time WebRTC-based vital signs detection platform enabling AI-driven face recognition and health parameter estimation from live video streams.",
+        "Engineered facial alignment algorithms and transformed video frames into optimized signal arrays to enhance processing efficiency and platform scalability.",
+        "Optimized streaming and inference processes to reduce processing time by 30%, delivering more accurate and responsive health analytics."
       ],
       "links": [],
       "images": [],
       "featured": true,
-      "caseStudy": "## Overview\n\nFedo Vitals is a revolutionary health-tech product that uses a smartphone or webcam to measure vital signs (heart rate, blood pressure, SpO2, stress levels) through facial video analysis.\n\n## Technical Highlights\n\n- **WebRTC** for real-time video capture and streaming\n- **AI/ML models** for face detection and signal extraction\n- **Angular 16** with optimized rendering for smooth 30fps video processing\n- **PostgreSQL** for health data storage with HIPAA-compliant encryption\n\n## Impact\n\n- 30% improvement in AI inference speed\n- Sub-2-second vital sign measurement\n- Deployed to 50,000+ users",
-      "startDate": "2021-06-01",
-      "endDate": "2023-12-01"
+      "caseStudy": "## Overview\n\nFedo Vitals is a revolutionary health-tech product that uses a smartphone or webcam to measure vital signs (heart rate, blood pressure, SpO2, stress levels) through facial video analysis using WebRTC.\n\n## Technical Highlights\n\n- **WebRTC** for real-time video capture and streaming\n- **AI/ML models** for face detection and signal extraction\n- **Angular** with optimized rendering for smooth 30fps video processing\n- **PostgreSQL** for health data storage with HIPAA-compliant encryption\n- Engineered facial alignment algorithms and optimized signal arrays\n\n## Impact\n\n- 30% improvement in AI inference speed\n- Sub-2-second vital sign measurement\n- Deployed to 50,000+ users\n- AI-driven face recognition with real-time health parameter estimation",
+      "startDate": "2020-09-01",
+      "endDate": "2024-01-01"
     },
     {
       "id": "fedo-hsa",
       "slug": "fedo-hsa",
-      "title": "Fedo HSA (Health Savings Account)",
-      "category": "Fintech & Payments",
-      "description": "India's first Health Savings Account platform, integrating Neo-bank APIs for seamless digital transactions.",
+      "title": "Fintech – Health Savings Account (Fedo HSA)",
+      "category": "Fintech",
+      "thumbnail": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 340' fill='none'%3E%3Crect width='600' height='340' fill='%230f172a'/%3E%3Crect x='50' y='30' width='280' height='170' rx='16' fill='%23312e81' stroke='%236366f1' stroke-width='2'/%3E%3Crect x='76' y='62' width='44' height='32' rx='6' fill='%23f59e0b' opacity='.5'/%3E%3Crect x='80' y='72' width='28' height='10' rx='2' fill='%23f59e0b' opacity='.25'/%3E%3Crect x='76' y='116' width='36' height='8' rx='4' fill='%23818cf8' opacity='.4'/%3E%3Crect x='120' y='116' width='36' height='8' rx='4' fill='%23818cf8' opacity='.4'/%3E%3Crect x='164' y='116' width='36' height='8' rx='4' fill='%23818cf8' opacity='.4'/%3E%3Crect x='208' y='116' width='36' height='8' rx='4' fill='%23818cf8' opacity='.4'/%3E%3Crect x='76' y='148' width='80' height='8' rx='4' fill='%23818cf8' opacity='.3'/%3E%3Crect x='76' y='164' width='50' height='8' rx='4' fill='%23818cf8' opacity='.2'/%3E%3Crect x='240' y='148' width='70' height='30' rx='6' fill='%236366f1' opacity='.2'/%3E%3Crect x='370' y='30' width='180' height='80' rx='12' fill='%231e293b' stroke='%2310b981' stroke-width='1.5'/%3E%3Crect x='394' y='50' width='130' height='10' rx='5' fill='%23334155'/%3E%3Crect x='394' y='68' width='100' height='18' rx='6' fill='%2310b981' opacity='.15'/%3E%3Crect x='400' y='72' width='60' height='10' rx='4' fill='%2310b981' opacity='.4'/%3E%3Crect x='370' y='126' width='180' height='74' rx='12' fill='%231e293b' stroke='%23475569' stroke-width='1'/%3E%3Crect x='394' y='146' width='130' height='10' rx='5' fill='%23334155'/%3E%3Crect x='394' y='164' width='80' height='8' rx='4' fill='%23ef4444' opacity='.3'/%3E%3Crect x='50' y='220' width='500' height='90' rx='12' fill='%231e293b'/%3E%3Ccircle cx='100' cy='265' r='22' fill='%23064e3b'/%3E%3Cpath d='M90 265l7 7 14-14' stroke='%2310b981' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3Crect x='140' y='248' width='180' height='10' rx='5' fill='%23475569'/%3E%3Crect x='140' y='268' width='130' height='8' rx='4' fill='%23334155'/%3E%3Crect x='400' y='244' width='120' height='40' rx='8' fill='%236366f1' opacity='.15'/%3E%3Cpath d='M415 274h20l10-16l14 28l10-20l8 12l10-8l14 0' stroke='%236366f1' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E",
+      "description": "Developed India's first Health Savings Account (HSA) platform integrating neo-bank APIs for seamless digital transactions, with automated account management ensuring compliance and enhanced user experience.",
       "role": "Full Stack Developer",
-      "techStack": ["Angular 16", "NestJS", "PostgreSQL", "Neo-Bank APIs"],
+      "techStack": ["Angular", "NestJS", "PostgreSQL", "Neo-Bank APIs"],
       "highlights": [
-        "Developed India's first Health Savings Account (HSA) platform, integrating Neo-bank APIs for seamless digital transactions.",
-        "Engineered automated account management, enhancing user experience & ensuring banking compliance."
+        "Developed India's first Health Savings Account (HSA) platform integrating neo-bank APIs for seamless digital transactions.",
+        "Engineered automated account management ensuring compliance and enhanced user experience.",
+        "Integrated real-time transactions, insurance premium payments, and claim processing."
       ],
       "links": [],
       "images": [],
@@ -193,38 +224,22 @@
     {
       "id": "fedo-admin",
       "slug": "fedo-admin-panel",
-      "title": "Fedo Admin Panel",
+      "title": "Enterprise Admin & CRM Platform (Fedo Admin Panel)",
       "category": "Enterprise Software",
-      "description": "Responsive CRM & product customization tool with scalable APIs for automation & analytics dashboards.",
+      "thumbnail": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 340' fill='none'%3E%3Crect width='600' height='340' fill='%230f172a'/%3E%3Crect x='30' y='20' width='540' height='300' rx='12' fill='%231e293b' stroke='%23475569' stroke-width='1.5'/%3E%3Crect x='30' y='20' width='540' height='36' rx='12' fill='%23334155'/%3E%3Ccircle cx='54' cy='38' r='6' fill='%23ef4444'/%3E%3Ccircle cx='74' cy='38' r='6' fill='%23f59e0b'/%3E%3Ccircle cx='94' cy='38' r='6' fill='%2310b981'/%3E%3Crect x='30' y='56' width='110' height='264' fill='%230f172a'/%3E%3Crect x='42' y='74' width='86' height='14' rx='6' fill='%236366f1' opacity='.5'/%3E%3Crect x='42' y='98' width='86' height='14' rx='6' fill='%23334155'/%3E%3Crect x='42' y='122' width='86' height='14' rx='6' fill='%23334155'/%3E%3Crect x='42' y='146' width='86' height='14' rx='6' fill='%23334155'/%3E%3Crect x='42' y='170' width='86' height='14' rx='6' fill='%23334155'/%3E%3Crect x='155' y='70' width='125' height='70' rx='8' fill='%23334155'/%3E%3Crect x='170' y='84' width='50' height='10' rx='4' fill='%2310b981' opacity='.5'/%3E%3Crect x='170' y='100' width='90' height='20' rx='6' fill='%2310b981' opacity='.15'/%3E%3Crect x='176' y='106' width='40' height='8' rx='3' fill='%2310b981' opacity='.5'/%3E%3Crect x='295' y='70' width='125' height='70' rx='8' fill='%23334155'/%3E%3Crect x='310' y='84' width='50' height='10' rx='4' fill='%236366f1' opacity='.5'/%3E%3Crect x='310' y='100' width='90' height='20' rx='6' fill='%236366f1' opacity='.15'/%3E%3Crect x='316' y='106' width='55' height='8' rx='3' fill='%236366f1' opacity='.5'/%3E%3Crect x='435' y='70' width='120' height='70' rx='8' fill='%23334155'/%3E%3Crect x='450' y='84' width='50' height='10' rx='4' fill='%23f59e0b' opacity='.5'/%3E%3Crect x='450' y='100' width='90' height='20' rx='6' fill='%23f59e0b' opacity='.15'/%3E%3Crect x='456' y='106' width='48' height='8' rx='3' fill='%23f59e0b' opacity='.5'/%3E%3Crect x='155' y='155' width='400' height='150' rx='8' fill='%23334155'/%3E%3Cpath d='M180 270l30-30l30 15l30-45l30 20l30-35l30 10l30-20l30 30l30-15l30 10' stroke='%236366f1' stroke-width='2.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M180 270l30-30l30 15l30-45l30 20l30-35l30 10l30-20l30 30l30-15l30 10V285H180Z' fill='%236366f1' opacity='.08'/%3E%3Crect x='180' y='170' width='100' height='8' rx='4' fill='%23475569'/%3E%3Crect x='180' y='184' width='60' height='6' rx='3' fill='%23334155'/%3E%3C/svg%3E",
+      "description": "Designed a scalable CRM and product customization platform with robust APIs supporting automation, analytics dashboards, and enterprise workflow management.",
       "role": "Full Stack Developer",
-      "techStack": ["Angular 16", "Node 16", "PostgreSQL", "NestJS"],
+      "techStack": ["Angular", "NestJS", "PostgreSQL", "Node.js"],
       "highlights": [
-        "Designed a responsive CRM & product customization tool.",
-        "Built scalable APIs for automation & analytics dashboards."
+        "Designed a scalable CRM and product customization platform with robust APIs.",
+        "Built automation features, analytics dashboards, and enterprise workflow management.",
+        "Supported comprehensive analytics and enterprise-grade reporting."
       ],
       "links": [],
       "images": [],
       "featured": false,
       "startDate": "2021-01-01",
       "endDate": "2023-06-01"
-    },
-    {
-      "id": "police-exam",
-      "slug": "police-exam-system",
-      "title": "Police Exam System",
-      "category": "Government & E-Governance",
-      "description": "Secure online exam platform with real-time evaluation and automated scoring for police recruitment.",
-      "role": "Full Stack Developer",
-      "techStack": ["Angular 13", "NestJS", "MongoDB"],
-      "highlights": [
-        "Built a secure online exam platform with real-time evaluation & automated scoring.",
-        "Designed a responsive admin panel for exam monitoring & candidate performance tracking."
-      ],
-      "links": [],
-      "images": [],
-      "featured": false,
-      "startDate": "2022-08-01",
-      "endDate": "2023-02-01"
     }
   ],
   "education": [
@@ -240,7 +255,7 @@
   ],
   "certifications": [
     {
-      "name": "Full-Stack Web Development Certification",
+      "name": "Full-Stack Web Development",
       "issuer": "Professional Training Institute",
       "date": "2020"
     },

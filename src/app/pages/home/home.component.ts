@@ -123,18 +123,18 @@ import { ProjectCardComponent } from '../../shared/components/project-card/proje
           </div>
 
           <!-- Project Highlights Showcase -->
-          <div class="hero-showcase animate-fade-in stagger-3" aria-hidden="true">
+          <div class="hero-showcase animate-fade-in stagger-3">
             <div class="showcase-container">
               <!-- Floating Project Cards -->
               <div class="project-highlights">
                 @for (highlight of projectHighlights; track highlight.name; let i = $index) {
-                  <div class="highlight-card" [style.--index]="i">
+                  <a class="highlight-card" [routerLink]="['/p', profileService.profile()?.slug, 'projects', highlight.slug]" [style.--index]="i">
                     <div class="highlight-icon" [innerHTML]="sanitize(highlight.icon)"></div>
                     <div class="highlight-info">
                       <span class="highlight-name">{{ highlight.name }}</span>
                       <span class="highlight-category">{{ highlight.category }}</span>
                     </div>
-                  </div>
+                  </a>
                 }
               </div>
               <!-- Center Stats -->
@@ -150,7 +150,7 @@ import { ProjectCardComponent } from '../../shared/components/project-card/proje
                 <span class="float-tech t1">Angular</span>
                 <span class="float-tech t2">NestJS</span>
                 <span class="float-tech t3">AWS</span>
-                <span class="float-tech t4">MongoDB</span>
+                <span class="float-tech t4">Docker</span>
               </div>
             </div>
           </div>
@@ -464,7 +464,7 @@ import { ProjectCardComponent } from '../../shared/components/project-card/proje
                         <div class="card-chip"></div>
                         <div class="card-number">•••• •••• •••• 4532</div>
                         <div class="card-details">
-                          <span class="card-name">DINIL FERNANDO</span>
+                          <span class="card-name">DINIL JOSE</span>
                           <span class="card-expiry">12/28</span>
                         </div>
                       </div>
@@ -1031,6 +1031,9 @@ import { ProjectCardComponent } from '../../shared/components/project-card/proje
       transition: all 0.3s ease;
       animation: floatCard 4s ease-in-out infinite;
       animation-delay: calc(var(--index) * 0.5s);
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
     }
 
     .highlight-card:hover {
@@ -1888,7 +1891,14 @@ import { ProjectCardComponent } from '../../shared/components/project-card/proje
 
     .projects-grid {
       display: grid;
+      grid-template-columns: repeat(2, 1fr);
       gap: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     .project-item {
@@ -3159,29 +3169,33 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild('particleCanvas') particleCanvas!: ElementRef<HTMLCanvasElement>;
   @ViewChild('heroSection') heroSection!: ElementRef<HTMLElement>;
 
-  topSkills = ['Angular', 'NestJS', 'TypeScript', 'Node.js', 'MongoDB', 'AWS'];
+  topSkills = ['Angular', 'TypeScript', 'NestJS', 'Node.js', 'AWS', 'PostgreSQL'];
   
   // Project highlights for hero showcase
   projectHighlights = [
     { 
+      name: 'E-Visa Platform', 
+      slug: 'evisa-portal',
+      category: 'GovTech',
+      icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10,9 9,9 8,9"/></svg>'
+    },
+    { 
       name: 'Fedo Vitals', 
+      slug: 'fedo-vitals',
       category: 'Healthcare AI',
       icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"/><path d="M8 15v1a6 6 0 0 0 6 6h1a2 2 0 0 0 2-2v-5a6 6 0 0 0-6-6"/></svg>'
     },
     { 
-      name: 'Kuwait E-Visa', 
-      category: 'Government',
-      icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10,9 9,9 8,9"/></svg>'
-    },
-    { 
       name: 'Fedo HSA', 
+      slug: 'fedo-hsa',
       category: 'Fintech',
       icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>'
     },
     { 
-      name: 'Admin Dashboard', 
-      category: 'Analytics',
-      icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/><path d="M13 15h4"/><path d="M13 12h4"/></svg>'
+      name: 'DMS', 
+      slug: 'document-management-system',
+      category: 'GovTech',
+      icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>'
     }
   ];
   
@@ -3207,32 +3221,32 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     { 
       name: 'Frontend', 
       svgIcon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="m9 9 3 3-3 3"/><path d="M14 15h3"/></svg>',
-      skills: ['Angular', 'TypeScript', 'RxJS', 'SCSS'] 
+      skills: ['Angular (v13-18)', 'TypeScript', 'RxJS', 'NgRx', 'SCSS', 'Tailwind CSS'] 
     },
     { 
       name: 'Backend', 
       svgIcon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6M9 13h6M9 17h4"/></svg>',
-      skills: ['NestJS', 'Node.js', 'REST APIs', 'WebSockets'] 
+      skills: ['Node.js', 'NestJS', 'Express.js', 'REST', 'GraphQL', 'WebSocket'] 
     },
     { 
       name: 'Database', 
       svgIcon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"/></svg>',
-      skills: ['MongoDB', 'PostgreSQL', 'Redis'] 
+      skills: ['PostgreSQL', 'MongoDB', 'Redis'] 
     },
     { 
       name: 'Cloud & DevOps', 
       svgIcon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>',
-      skills: ['AWS', 'Docker', 'CI/CD', 'GitLab'] 
+      skills: ['AWS', 'Docker', 'Kubernetes', 'Nginx', 'Linux'] 
     },
     { 
-      name: 'Testing', 
+      name: 'CI/CD & Testing', 
       svgIcon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 2v6l-2 4v9a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-9l-2-4V2"/><path d="M6 8h12"/><path d="M10 14a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm4 2a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/></svg>',
-      skills: ['Jest', 'Jasmine', 'Karma', 'E2E'] 
+      skills: ['GitHub Actions', 'Jenkins', 'GitLab CI/CD', 'Jest', 'Cypress', 'JMeter'] 
     },
     { 
-      name: 'Tools', 
+      name: 'Practices', 
       svgIcon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>',
-      skills: ['Git', 'Jira', 'Figma', 'VS Code'] 
+      skills: ['Microservices', 'Clean Architecture', 'SOLID', 'OAuth2/JWT', 'Agile/Scrum'] 
     }
   ];
 
