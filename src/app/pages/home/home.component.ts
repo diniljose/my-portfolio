@@ -42,6 +42,7 @@ import { ProjectCardComponent } from '../../shared/components/project-card/proje
 
         <div class="container hero-container">
           <div class="hero-content">
+
             <!-- Status Badge -->
             <div class="status-badge animate-fade-in-up" [class]="profile.availability">
               <svg class="status-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -58,16 +59,14 @@ import { ProjectCardComponent } from '../../shared/components/project-card/proje
               </h1>
             </div>
 
-            <!-- Role with animated typing effect styling -->
-            <div class="hero-role animate-fade-in-up stagger-2">
-              <div class="role-line"></div>
-              <span class="role-text font-mono">{{ profile.headline }}</span>
+            <!-- Modern Headline Block -->
+            <div class="hero-modern-headline animate-fade-in-up stagger-2">
+              <span class="modern-title">Senior Software Engineer | Angular | Node.js | AWS</span>
+              <span class="modern-summary">
+                Building scalable, secure, and high-performance enterprise applications across GovTech, Healthcare AI, and FinTech.<br>
+                Specialized in microservices architecture, API integrations, and cloud-native systems that power real-world platforms.
+              </span>
             </div>
-
-            <!-- Summary -->
-            <p class="hero-summary animate-fade-in-up stagger-3">
-              {{ profile.summary }}
-            </p>
 
             <!-- Tech Stack -->
             <div class="tech-stack animate-fade-in-up stagger-4">
@@ -642,6 +641,48 @@ import { ProjectCardComponent } from '../../shared/components/project-card/proje
     }
   `,
   styles: [`
+        /* Modern Headline Block Styles */
+        .hero-modern-headline {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          margin: 2.5rem 0 2rem 0;
+          padding: 1.5rem 2rem;
+          background: linear-gradient(90deg, rgba(var(--accent-rgb),0.08) 0%, rgba(var(--accent-rgb),0.02) 100%);
+          border-radius: 1.25rem;
+          box-shadow: 0 2px 16px 0 rgba(var(--accent-rgb),0.07);
+          max-width: 600px;
+          width: 100%;
+          gap: 1.1rem;
+          animation: fadeInUp 0.7s cubic-bezier(.23,1.01,.32,1) both;
+        }
+        .modern-title {
+          font-size: 1.25rem;
+          font-weight: 700;
+          color: var(--accent);
+          letter-spacing: 0.01em;
+          margin-bottom: 0.2rem;
+          text-shadow: 0 1px 2px rgba(var(--accent-rgb),0.08);
+        }
+        .modern-summary {
+          font-size: 1.05rem;
+          color: var(--text-secondary);
+          line-height: 1.6;
+          font-weight: 500;
+        }
+        @media (max-width: 600px) {
+          .hero-modern-headline {
+            padding: 1.1rem 1rem;
+            max-width: 100%;
+            font-size: 1rem;
+          }
+          .modern-title {
+            font-size: 1.05rem;
+          }
+          .modern-summary {
+            font-size: 0.97rem;
+          }
+        }
     /* ═══ PROFESSIONAL HERO ═══ */
     .hero {
       position: relative;

@@ -65,7 +65,12 @@ import { ProfileService, SeoService } from '../../core/services';
       <section class="quote-section section">
         <div class="container">
           <blockquote class="pullquote anim-rise" style="--d:0.1s">
-            <p>{{ profile.summary }}</p>
+            <p>
+              Impact-driven Senior Software Engineer with 5+ years of experience designing and delivering scalable, secure, and high-performance web applications across GovTech, Healthcare AI, and FinTech domains.<br><br>
+              I specialize in Angular and Node.js, building modern user-centric interfaces and architecting robust full-stack enterprise systems. My experience includes designing microservices architectures, integrating complex REST/SOAP services, and deploying cloud-native solutions on AWS.<br><br>
+              I focus on writing clean, maintainable, and secure code, while continuously improving system performance, reliability, and deployment speed through CI/CD automation and modern DevOps practices.<br><br>
+              Passionate about solving complex problems, I enjoy building systems that scale efficiently, handle real-world workloads, and deliver meaningful impact to users and organizations.
+            </p>
           </blockquote>
         </div>
       </section>
@@ -182,6 +187,21 @@ import { ProfileService, SeoService } from '../../core/services';
     }
   `,
   styles: [`
+        /* Pullquote summary block for About page */
+        .pullquote p {
+          font-size: 1.13rem;
+          line-height: 1.7;
+          color: var(--text-primary);
+          font-weight: 500;
+          margin: 0;
+          padding: 0.5rem 0;
+        }
+        @media (max-width: 600px) {
+          .pullquote p {
+            font-size: 1.01rem;
+            line-height: 1.55;
+          }
+        }
     /* ═══════════════════════════════════
        ABOUT HERO — EDITORIAL / MAGAZINE
        Single column, centered, NO circles,
