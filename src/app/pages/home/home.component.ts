@@ -3,13 +3,12 @@ import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { ProfileService, SeoService } from '../../core/services';
-import { SectionHeaderComponent } from '../../shared/components/section-header/section-header.component';
 import { ProjectCardComponent } from '../../shared/components/project-card/project-card.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, RouterLink, SectionHeaderComponent, ProjectCardComponent],
+  imports: [CommonModule, RouterLink, ProjectCardComponent],
   template: `
     @if (profileService.loading()) {
       <div class="loading-state section">
@@ -2881,20 +2880,46 @@ import { ProjectCardComponent } from '../../shared/components/project-card/proje
 
     @media (max-width: 768px) {
       .implementations-grid {
-        grid-template-columns: 1fr;
-        gap: 1.25rem;
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        gap: 1rem;
+        padding-bottom: 0.5rem;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
       }
-      
+
+      .implementations-grid::-webkit-scrollbar { display: none; }
+
+      .impl-card {
+        min-width: 280px;
+        max-width: 85vw;
+        flex-shrink: 0;
+        scroll-snap-align: start;
+      }
+
       .impl-visual {
-        height: 160px;
+        height: 120px;
       }
-      
+
       .impl-content {
         padding: 1rem;
       }
-      
+
       .impl-title {
         font-size: 0.9375rem;
+      }
+
+      .impl-features {
+        display: none;
+      }
+
+      .impl-desc {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
       }
     }
 
@@ -3107,54 +3132,156 @@ import { ProjectCardComponent } from '../../shared/components/project-card/proje
     }
 
     @media (max-width: 768px) {
+      /* ── Hero: compact & punchy ── */
       .hero {
         min-height: auto;
-        padding-top: 6rem;
+        padding-top: 5rem;
       }
 
       .hero-container {
         min-height: auto;
-        padding-top: 2rem;
+        padding-top: 1rem;
+        padding-bottom: 1.5rem;
       }
 
       .hero-showcase {
         display: none;
       }
 
+      .hero-heading {
+        margin-bottom: 0.75rem;
+      }
+
       .hero-name {
-        font-size: clamp(2rem, 10vw, 3rem);
+        font-size: clamp(2.25rem, 11vw, 3rem);
+      }
+
+      .hero-role {
+        margin-bottom: 0.75rem;
+      }
+
+      .hero-summary {
+        font-size: 0.9375rem;
+        line-height: 1.6;
+        margin-bottom: 1.25rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      .tech-stack {
+        display: none;
+      }
+
+      .status-badge {
+        margin-bottom: 1rem;
       }
 
       .hero-cta {
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .btn-text-pro {
+        display: none;
+      }
+
+      .hero-social {
+        display: none;
       }
 
       .scroll-cue {
         display: none;
       }
 
+      /* ── Expertise: compact 2-col grid ── */
+      .section-intro {
+        margin-bottom: 2rem;
+      }
+
+      .section-title {
+        font-size: 1.5rem;
+      }
+
+      .section-desc {
+        font-size: 0.875rem;
+      }
+
+      .expertise-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+      }
+
+      .expertise-card {
+        padding: 1rem;
+      }
+
+      .card-icon {
+        width: 32px;
+        height: 32px;
+        margin-bottom: 0.625rem;
+      }
+
+      .card-title {
+        font-size: 0.875rem;
+        margin-bottom: 0;
+      }
+
+      .card-skills {
+        display: none;
+      }
+
+      .card-accent {
+        display: none;
+      }
+
+      .section-cta {
+        margin-top: 1.5rem;
+      }
+
+      /* ── Metrics: 2×2 compact ── */
+      .metrics-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+      }
+
+      .metric-card {
+        padding: 1.25rem 1rem;
+      }
+
+      .metric-icon {
+        width: 28px;
+        height: 28px;
+        margin-bottom: 0.5rem;
+      }
+
+      .metric-value {
+        font-size: 1.75rem;
+      }
+
+      .metric-label {
+        font-size: 0.75rem;
+      }
+
+      /* ── CTA: tight ── */
       .cta-wrapper {
-        padding: 2rem;
+        padding: 2rem 1.5rem;
       }
 
       .cta-visual {
         display: none;
       }
 
-      .metric-value {
-        font-size: 2rem;
+      .cta-heading {
+        font-size: 1.25rem;
       }
 
-      .expertise-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .impl-visual {
-        height: 160px;
-      }
-
-      .impl-title {
-        font-size: 1rem;
+      .cta-desc {
+        font-size: 0.875rem;
+        margin-bottom: 1.25rem;
       }
     }
   `],

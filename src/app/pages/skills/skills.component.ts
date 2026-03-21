@@ -144,22 +144,19 @@ import { Skill, SkillCategory } from '../../core/models';
                   
                   <!-- Glow backdrop -->
                   <div class="tile-glow" aria-hidden="true"></div>
-                  
-                  <!-- Level indicator strip -->
-                  <div class="level-strip">
-                    @for (dot of levelDots; track dot) {
-                      <div class="strip-dot" [class.filled]="dot <= skill.level"></div>
-                    }
-                  </div>
 
                   <div class="tile-body">
                     <div class="tile-top">
                       <h3 class="tile-name">{{ skill.name }}</h3>
-                      @if (skill.level === 5) {
-                        <span class="expert-star" title="Expert">
-                          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                        </span>
-                      }
+                      <span class="level-badge" 
+                            [class.level-5]="skill.level === 5" 
+                            [class.level-4]="skill.level === 4" 
+                            [class.level-3]="skill.level === 3"
+                            [class.level-2]="skill.level === 2"
+                            [class.level-1]="skill.level === 1">
+                        <span class="level-badge-dot"></span>
+                        {{ getLevelLabel(skill.level) }}
+                      </span>
                     </div>
 
                     <!-- Animated progress bar -->
@@ -167,7 +164,6 @@ import { Skill, SkillCategory } from '../../core/models';
                       <div class="progress-track">
                         <div class="progress-fill" [style.--pct]="(skill.level / 5 * 100) + '%'"></div>
                       </div>
-                      <span class="progress-label">{{ getLevelLabel(skill.level) }}</span>
                     </div>
 
                     <!-- Tags -->
@@ -632,6 +628,14 @@ import { Skill, SkillCategory } from '../../core/models';
       box-shadow: 0 20px 50px rgba(251, 191, 36, 0.1), 0 0 30px rgba(251, 191, 36, 0.05);
     }
 
+    .skill-tile.is-advanced {
+      border-color: rgba(var(--accent-rgb), 0.2);
+    }
+
+    .skill-tile.is-advanced:hover {
+      border-color: rgba(var(--accent-rgb), 0.6);
+    }
+
     /* Glow effect */
     .tile-glow {
       position: absolute;
@@ -650,44 +654,18 @@ import { Skill, SkillCategory } from '../../core/models';
       background: radial-gradient(circle at 50% 0%, rgba(251, 191, 36, 0.06) 0%, transparent 60%);
     }
 
-    /* Level strip */
-    .level-strip {
-      display: flex;
-      gap: 3px;
-      padding: 8px 16px 0;
-    }
-
-    .strip-dot {
-      flex: 1;
-      height: 3px;
-      border-radius: 3px;
-      background: var(--bg-tertiary);
-      transition: all 0.3s ease;
-    }
-
-    .strip-dot.filled {
-      background: var(--accent);
-    }
-
-    .skill-tile.is-expert .strip-dot.filled {
-      background: #fbbf24;
-    }
-
-    .skill-tile:hover .strip-dot.filled {
-      box-shadow: 0 0 8px rgba(var(--accent-rgb), 0.5);
-    }
-
     /* Tile body */
     .tile-body {
-      padding: 1rem 1.25rem 1.25rem;
+      padding: 1.25rem;
       position: relative;
       z-index: 1;
     }
 
     .tile-top {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: space-between;
+      gap: 0.5rem;
       margin-bottom: 0.75rem;
     }
 
@@ -698,23 +676,73 @@ import { Skill, SkillCategory } from '../../core/models';
       color: var(--text-primary);
     }
 
-    .expert-star {
-      color: #fbbf24;
-      width: 18px;
-      height: 18px;
+    /* Level badge */
+    .level-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 0.1875rem 0.625rem;
+      font-size: 0.625rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      border-radius: 100px;
+      white-space: nowrap;
       flex-shrink: 0;
-      animation: starSpin 4s ease-in-out infinite;
+      transition: all 0.3s ease;
     }
 
-    .expert-star svg {
-      width: 100%;
-      height: 100%;
+    .level-badge-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      animation: badgePulse 2s ease-in-out infinite;
     }
 
-    @keyframes starSpin {
-      0%, 100% { transform: rotate(0deg) scale(1); }
-      25% { transform: rotate(10deg) scale(1.1); }
-      75% { transform: rotate(-5deg) scale(1); }
+    @keyframes badgePulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.4); opacity: 0.7; }
+    }
+
+    .level-badge.level-5 {
+      background: rgba(251, 191, 36, 0.12);
+      color: #f59e0b;
+      border: 1px solid rgba(251, 191, 36, 0.25);
+    }
+    .level-badge.level-5 .level-badge-dot { background: #fbbf24; box-shadow: 0 0 6px rgba(251, 191, 36, 0.6); }
+
+    .level-badge.level-4 {
+      background: rgba(var(--accent-rgb), 0.1);
+      color: var(--accent);
+      border: 1px solid rgba(var(--accent-rgb), 0.2);
+    }
+    .level-badge.level-4 .level-badge-dot { background: var(--accent); box-shadow: 0 0 6px rgba(var(--accent-rgb), 0.5); }
+
+    .level-badge.level-3 {
+      background: rgba(16, 185, 129, 0.1);
+      color: #10b981;
+      border: 1px solid rgba(16, 185, 129, 0.2);
+    }
+    .level-badge.level-3 .level-badge-dot { background: #10b981; box-shadow: 0 0 6px rgba(16, 185, 129, 0.5); }
+
+    .level-badge.level-2 {
+      background: rgba(14, 165, 233, 0.1);
+      color: #0ea5e9;
+      border: 1px solid rgba(14, 165, 233, 0.2);
+    }
+    .level-badge.level-2 .level-badge-dot { background: #0ea5e9; box-shadow: 0 0 6px rgba(14, 165, 233, 0.5); }
+
+    .level-badge.level-1 {
+      background: rgba(var(--accent-rgb), 0.06);
+      color: var(--text-tertiary);
+      border: 1px solid var(--border-subtle);
+    }
+    .level-badge.level-1 .level-badge-dot { background: var(--text-tertiary); }
+
+    .skill-tile:hover .level-badge {
+      transform: translateY(-1px);
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
     }
 
     /* Progress bar */
@@ -764,14 +792,7 @@ import { Skill, SkillCategory } from '../../core/models';
       background: linear-gradient(90deg, #f59e0b, #fbbf24);
     }
 
-    .progress-label {
-      font-size: 0.6875rem;
-      font-weight: 600;
-      color: var(--text-tertiary);
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-      white-space: nowrap;
-    }
+
 
     /* Tags */
     .tile-tags {
@@ -1048,8 +1069,82 @@ import { Skill, SkillCategory } from '../../core/models';
         font-size: 1.25rem;
       }
 
+      /* ── Compact skill chips on mobile ── */
       .skills-track {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 0.5rem;
+      }
+
+      .skill-tile {
+        border-radius: 10px;
+      }
+
+      .tile-glow {
+        display: none;
+      }
+
+      .tile-body {
+        padding: 0.625rem 0.75rem;
+      }
+
+      .tile-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.375rem;
+        margin-bottom: 0;
+      }
+
+      .tile-name {
+        font-size: 0.8125rem;
+        line-height: 1.2;
+      }
+
+      .level-badge {
+        padding: 0.125rem 0.5rem;
+        font-size: 0.5625rem;
+        gap: 4px;
+      }
+
+      .level-badge-dot {
+        width: 5px;
+        height: 5px;
+      }
+
+      .tile-progress {
+        display: none;
+      }
+
+      .tile-tags {
+        display: none;
+      }
+
+      /* Category blocks compact */
+      .category-block {
+        margin-bottom: 2rem;
+      }
+
+      .category-header {
+        margin-bottom: 1rem;
+      }
+
+      .cat-icon-wrap {
+        width: 32px;
+        height: 32px;
+        border-radius: 8px;
+      }
+
+      .cat-icon-wrap svg {
+        width: 16px;
+        height: 16px;
+      }
+
+      .cat-title {
+        font-size: 1rem;
+      }
+
+      /* Hide proficiency section on mobile */
+      .prof-section {
+        display: none;
       }
 
       .prof-grid {
@@ -1062,6 +1157,15 @@ import { Skill, SkillCategory } from '../../core/models';
 
       .hex-grid {
         display: none;
+      }
+
+      /* CTA compact */
+      .cta-content {
+        padding: 2.5rem 1.5rem;
+      }
+
+      .cta-title {
+        font-size: 1.25rem;
       }
     }
 
@@ -1083,8 +1187,16 @@ import { Skill, SkillCategory } from '../../core/models';
         font-size: 0.5625rem;
       }
 
-      .bar-label {
-        width: 70px;
+      .skills-track {
+        grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+        gap: 0.375rem;
+      }
+
+      .tile-body {
+        padding: 0.4375rem 0.625rem;
+      }
+
+      .tile-name {
         font-size: 0.75rem;
       }
     }
