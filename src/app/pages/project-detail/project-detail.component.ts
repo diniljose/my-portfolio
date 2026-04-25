@@ -2535,22 +2535,50 @@ export class ProjectDetailComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
       const slug = params.get('projectSlug');
-      const found = this.profileService.projects().find(p => p.slug === slug);
-      this.project.set(found || null);
 
-      if (found) {
-        this.seoService.update({
-          title: found.title,
-          description: found.description,
-        });
+      if (!slug) {
+        this.project.set(null);
+        return;
+      }
 
-        if (found.caseStudy) {
-          this.renderedCaseStudy.set(marked(found.caseStudy) as string);
+      const trySetProject = () => {
+        const projects = this.profileService.projects();
+
+        if (!projects || projects.length === 0) {
+          return false;
         }
+
+        const found = projects.find(p => p.slug === slug);
+
+        this.project.set(found || null);
+
+        if (found) {
+          this.seoService.update({
+            title: found.title,
+            description: found.description,
+          });
+
+          if (found.caseStudy) {
+            this.renderedCaseStudy.set(marked(found.caseStudy) as string);
+          }
+        }
+
+        return true;
+      };
+
+      // First attempt
+      if (!trySetProject()) {
+        // Retry safely until data is available (refresh-safe fix)
+        const interval = setInterval(() => {
+          const success = trySetProject();
+          if (success) {
+            clearInterval(interval);
+          }
+        }, 50);
       }
     });
 
-    // Demo state toggle for animations
+    // Demo state toggle for animations (unchanged logic)
     if (typeof window !== 'undefined') {
       this.demoInterval = setInterval(() => {
         this.demoState.set(!this.demoState());
@@ -2566,7 +2594,7 @@ export class ProjectDetailComponent implements OnInit, OnDestroy {
 
   getDemoType(project: Project): string {
     const slug = project.slug.toLowerCase();
-    
+
     if (slug.includes('vitals')) return 'vitals';
     if (slug.includes('evisa') || slug.includes('e-visa')) return 'evisa';
     if (slug.includes('exam')) return 'exam';
@@ -2574,7 +2602,7 @@ export class ProjectDetailComponent implements OnInit, OnDestroy {
     if (slug.includes('admin') || slug.includes('panel')) return 'dashboard';
     if (slug.includes('dms') || slug.includes('document')) return 'dms';
     if (slug.includes('middleware')) return 'middleware';
-    
+
     return 'default';
   }
 
@@ -2587,3 +2615,4 @@ export class ProjectDetailComponent implements OnInit, OnDestroy {
     return this.sanitizer.bypassSecurityTrustHtml(html);
   }
 }
+
