@@ -29,7 +29,7 @@ jobs:
 
       - name: Build production UI
         run: |
-          npm run build -- --configuration=production --base-href /portfolio/ --deploy-url /portfolio/
+          npm run build -- --configuration=production --base-href / --deploy-url /
 
       - name: Locate dist output
         id: dist
