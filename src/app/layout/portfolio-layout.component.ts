@@ -14,7 +14,7 @@ import { ThemeSwitchComponent } from '../shared/components/theme-switch/theme-sw
     <a class="skip-link" href="#main-content">Skip to main content</a>
 
     <!-- Modern Navigation -->
-    <nav class="nav" [class.scrolled]="isScrolled()" [class.hidden]="navHidden()">
+    <nav class="nav" [class.scrolled]="isScrolled()" [class.hidden]="navHidden() && !mobileMenuOpen()">
       <div class="nav-inner container">
         <!-- Logo -->
         <a [routerLink]="['/']" class="nav-logo group">
@@ -66,7 +66,7 @@ import { ThemeSwitchComponent } from '../shared/components/theme-switch/theme-sw
           
           <button
             class="mobile-toggle"
-            (click)="mobileMenuOpen.set(!mobileMenuOpen())"
+            (click)="toggleMobileMenu()"
             [attr.aria-expanded]="mobileMenuOpen()"
             [class.active]="mobileMenuOpen()"
             aria-label="Toggle menu">
@@ -704,6 +704,14 @@ export class PortfolioLayoutComponent implements OnInit {
 
   openSearch(): void {
     this.searchService.open();
+  }
+
+  toggleMobileMenu(): void {
+    const nextState = !this.mobileMenuOpen();
+    this.mobileMenuOpen.set(nextState);
+    if (nextState) {
+      this.navHidden.set(false);
+    }
   }
 
   getSocialIcon(platform: string): string {
