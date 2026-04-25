@@ -31,7 +31,7 @@ export class SearchService {
           type: 'project',
           title: p.title,
           subtitle: p.category + ' · ' + p.techStack.slice(0, 3).join(', '),
-          route: `/p/${slug}/projects/${p.slug}`,
+          route: `/projects/${p.slug}`,
           icon: 'project',
         });
       }
@@ -48,7 +48,7 @@ export class SearchService {
           type: 'skill',
           title: s.name,
           subtitle: s.category,
-          route: `/p/${slug}/skills`,
+          route: `/skills`,
           icon: 'skill',
         });
       }
@@ -66,7 +66,7 @@ export class SearchService {
           type: 'experience',
           title: e.role,
           subtitle: e.company,
-          route: `/p/${slug}/experience`,
+          route: `/experience`,
           icon: 'experience',
         });
       }
