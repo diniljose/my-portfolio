@@ -1,0 +1,25 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A0A0F"/>
+      <stop offset="100%" stop-color="#202238"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#4f46e5"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" rx="40" fill="url(#bg)"/>
+  <rect x="60" y="60" width="1080" height="510" rx="36" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.12)" stroke-width="2"/>
+  <circle cx="250" cy="225" r="110" fill="rgba(129, 140, 248, 0.16)"/>
+  <circle cx="950" cy="220" r="90" fill="rgba(79, 70, 229, 0.18)"/>
+  <path d="M90 520 H1110" stroke="rgba(255,255,255,0.05)" stroke-width="2" stroke-linecap="round"/>
+  <text x="120" y="240" fill="#ffffff" font-family="Inter, sans-serif" font-size="72" font-weight="700">Dinil Jose</text>
+  <text x="120" y="320" fill="#c7d2fe" font-family="Inter, sans-serif" font-size="34" font-weight="500">Software Engineer & Web Developer</text>
+  <text x="120" y="380" fill="#94a3b8" font-family="Inter, sans-serif" font-size="24" letter-spacing="0.08em">Personal portfolio • Projects • Skills • Experience</text>
+  <rect x="120" y="420" width="220" height="60" rx="18" fill="url(#accent)" opacity="0.95"/>
+  <text x="140" y="460" fill="#ffffff" font-family="Inter, sans-serif" font-size="22" font-weight="600">View My Work</text>
+  <circle cx="980" cy="450" r="70" fill="rgba(129, 140, 248, 0.18)"/>
+  <circle cx="1010" cy="480" r="36" fill="#818cf8" opacity="0.8"/>
+  <circle cx="970" cy="410" r="24" fill="#4f46e5" opacity="0.9"/>
+</svg>

@@ -136,7 +136,7 @@ import { ProfileService, SeoService } from '../../core/services';
             <p class="cta-sub">Looking for a senior engineer to drive your next big project?</p>
           </div>
           <div class="cta-actions">
-            <a routerLink="/p/dinil/contact" class="cta-primary">
+            <a [routerLink]="['/contact']" class="cta-primary">
               Get in Touch
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
             </a>

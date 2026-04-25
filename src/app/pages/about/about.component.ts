@@ -176,7 +176,7 @@ import { ProfileService, SeoService } from '../../core/services';
               <span class="cta-label">Let's Connect</span>
               <h2 class="cta-heading">Interested in working together?</h2>
               <p class="cta-desc">Always open to discussing new projects and opportunities.</p>
-              <a routerLink="/p/dinil/contact" class="cta-btn">
+              <a [routerLink]="['/contact']" class="cta-btn">
                 <span>Get in Touch</span>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
               </a>
