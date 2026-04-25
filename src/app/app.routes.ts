@@ -3,16 +3,6 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'p/dinil',
-    pathMatch: 'full',
-  },
-  {
-    path: 'admin',
-    loadChildren: () =>
-      import('./admin/admin.routes').then(m => m.adminRoutes),
-  },
-  {
-    path: 'p/:slug',
     loadComponent: () =>
       import('./layout/portfolio-layout.component').then(m => m.PortfolioLayoutComponent),
     children: [
@@ -59,7 +49,19 @@ export const routes: Routes = [
     ],
   },
   {
-    path: '**',
-    redirectTo: 'p/dinil',
+    path: 'admin',
+    loadChildren: () =>
+      import('./admin/admin.routes').then(m => m.adminRoutes),
+  },
+  // Redirect old profile routes to new structure
+  {
+    path: 'p/:slug',
+    redirectTo: '',
+    pathMatch: 'full',
+  },
+  {
+    path: 'p/:slug/:path',
+    redirectTo: ':path',
+    pathMatch: 'full',
   },
 ];

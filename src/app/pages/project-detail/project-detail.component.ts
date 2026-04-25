@@ -15,7 +15,7 @@ import { marked } from 'marked';
       <section class="section">
         <div class="container container-md">
           <!-- Back -->
-          <a [routerLink]="['/p', profileService.currentSlug(), 'projects']" class="back-link btn-ghost mb-xl">
+          <a [routerLink]="['/', 'projects']" class="back-link btn-ghost mb-xl">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="m12 19-7-7 7-7"/><path d="M19 12H5"/>
             </svg>
@@ -677,7 +677,7 @@ import { marked } from 'marked';
         <div class="container text-center" style="min-height: 50vh; display: flex; align-items: center; justify-content: center;">
           <div>
             <h2 class="text-h2">Project not found</h2>
-            <a [routerLink]="['/p', profileService.currentSlug(), 'projects']" class="btn-primary mt-lg">
+            <a [routerLink]="['/', 'projects']" class="btn-primary mt-lg">
               View All Projects
             </a>
           </div>

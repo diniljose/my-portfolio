@@ -17,7 +17,7 @@ import { ThemeSwitchComponent } from '../shared/components/theme-switch/theme-sw
     <nav class="nav" [class.scrolled]="isScrolled()" [class.hidden]="navHidden()">
       <div class="nav-inner container">
         <!-- Logo -->
-        <a [routerLink]="['/p', slug()]" class="nav-logo group">
+        <a [routerLink]="['/']" class="nav-logo group">
           <div class="logo-icon">
             <span class="logo-letter">{{ initials() }}</span>
             <div class="logo-glow"></div>
@@ -30,7 +30,7 @@ import { ThemeSwitchComponent } from '../shared/components/theme-switch/theme-sw
           <div class="nav-links-inner">
             @for (link of navLinks; track link.path; let i = $index) {
               <a
-                [routerLink]="['/p', slug(), link.path]"
+                [routerLink]="[link.path]"
                 routerLinkActive="active"
                 [routerLinkActiveOptions]="{ exact: link.path === '' }"
                 class="nav-link"
@@ -44,7 +44,7 @@ import { ThemeSwitchComponent } from '../shared/components/theme-switch/theme-sw
 
           <!-- Mobile CTA -->
           <div class="mobile-cta">
-            <a [routerLink]="['/p', slug(), 'contact']" class="btn-mobile-cta" (click)="mobileMenuOpen.set(false)">
+            <a [routerLink]="['contact']" class="btn-mobile-cta" (click)="mobileMenuOpen.set(false)">
               Let's Connect
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
@@ -96,7 +96,7 @@ import { ThemeSwitchComponent } from '../shared/components/theme-switch/theme-sw
         <!-- Footer Top -->
         <div class="footer-top">
           <div class="footer-brand">
-            <a [routerLink]="['/p', slug()]" class="footer-logo">
+            <a [routerLink]="['/']" class="footer-logo">
               <div class="logo-icon-sm">{{ initials() }}</div>
               <span class="footer-name">{{ profileName() }}</span>
             </a>
@@ -108,7 +108,7 @@ import { ThemeSwitchComponent } from '../shared/components/theme-switch/theme-sw
               <h4 class="footer-heading">Navigation</h4>
               <div class="footer-nav">
                 @for (link of navLinks | slice:0:4; track link.path) {
-                  <a [routerLink]="['/p', slug(), link.path]" class="footer-link">{{ link.label }}</a>
+                  <a [routerLink]="[link.path]" class="footer-link">{{ link.label }}</a>
                 }
               </div>
             </div>
@@ -116,7 +116,7 @@ import { ThemeSwitchComponent } from '../shared/components/theme-switch/theme-sw
               <h4 class="footer-heading">More</h4>
               <div class="footer-nav">
                 @for (link of navLinks | slice:4; track link.path) {
-                  <a [routerLink]="['/p', slug(), link.path]" class="footer-link">{{ link.label }}</a>
+                  <a [routerLink]="[link.path]" class="footer-link">{{ link.label }}</a>
                 }
               </div>
             </div>
@@ -731,12 +731,8 @@ export class PortfolioLayoutComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // Listen for route params
-    this.route.paramMap.subscribe(params => {
-      const slug = params.get('slug') || 'dinil';
-      this.slug.set(slug);
-      this.profileService.loadProfile(slug);
-    });
+    // Load default profile
+    this.profileService.loadProfile('dinil');
 
     // Apply profile theme override
     this.profileService.profile;

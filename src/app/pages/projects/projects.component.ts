@@ -56,7 +56,6 @@ import { ProjectCardComponent } from '../../shared/components/project-card/proje
             @for (project of filteredProjects(); track project.id; let i = $index) {
               <app-project-card
                 [project]="project"
-                [profileSlug]="profileService.currentSlug()"
                 class="animate-fade-in-up stagger-{{ (i % 6) + 1 }}">
               </app-project-card>
             }

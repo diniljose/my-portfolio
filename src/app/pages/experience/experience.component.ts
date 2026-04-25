@@ -140,7 +140,7 @@ import { ProfileService, SeoService } from '../../core/services';
               Get in Touch
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
             </a>
-            <a routerLink="/p/dinil/projects" class="cta-ghost">View Projects</a>
+            <a routerLink="/projects" class="cta-ghost">View Projects</a>
           </div>
         </div>
       </div>

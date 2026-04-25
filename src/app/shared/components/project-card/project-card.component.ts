@@ -8,7 +8,7 @@ import { Project } from '../../../core/models';
   standalone: true,
   imports: [CommonModule, RouterLink],
   template: `
-    <a [routerLink]="['/p', profileSlug, 'projects', project.slug]" class="project-card">
+    <a [routerLink]="['/', 'projects', project.slug]" class="project-card">
       <!-- Card Image -->
       <div class="card-image-container">
         @if (project.thumbnail) {
@@ -369,5 +369,4 @@ import { Project } from '../../../core/models';
 })
 export class ProjectCardComponent {
   @Input({ required: true }) project!: Project;
-  @Input() profileSlug = '';
 }

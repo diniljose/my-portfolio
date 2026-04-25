@@ -86,7 +86,7 @@ import { ProjectCardComponent } from '../../shared/components/project-card/proje
 
             <!-- CTA Buttons -->
             <div class="hero-cta animate-fade-in-up stagger-5">
-              <a [routerLink]="['projects']" class="btn-primary-pro">
+              <a [routerLink]="['/', 'projects']" class="btn-primary-pro">
                 <span>View Projects</span>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
@@ -126,7 +126,7 @@ import { ProjectCardComponent } from '../../shared/components/project-card/proje
               <!-- Floating Project Cards -->
               <div class="project-highlights">
                 @for (highlight of projectHighlights; track highlight.name; let i = $index) {
-                  <a class="highlight-card" [routerLink]="['/p', profileService.profile()?.slug, 'projects', highlight.slug]" [style.--index]="i">
+                  <a class="highlight-card" [routerLink]="['/', 'projects', highlight.slug]" [style.--index]="i">
                     <div class="highlight-icon" [innerHTML]="sanitize(highlight.icon)"></div>
                     <div class="highlight-info">
                       <span class="highlight-name">{{ highlight.name }}</span>
@@ -224,15 +224,14 @@ import { ProjectCardComponent } from '../../shared/components/project-card/proje
                 <div class="project-item animate-fade-in-up" [style.animation-delay]="(i * 0.12) + 's'">
                   <span class="project-index font-mono">0{{ i + 1 }}</span>
                   <app-project-card
-                    [project]="project"
-                    [profileSlug]="profileService.currentSlug()">
+                    [project]="project">
                   </app-project-card>
                 </div>
               }
             </div>
 
             <div class="section-cta animate-fade-in-up">
-              <a [routerLink]="['projects']" class="btn-primary-pro">
+              <a [routerLink]="['/', 'projects']" class="btn-primary-pro">
                 <span>View All Projects</span>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
@@ -259,7 +258,7 @@ import { ProjectCardComponent } from '../../shared/components/project-card/proje
 
           <div class="implementations-grid">
             <!-- Fedo Vitals - Face Detection & Vitals -->
-            <article class="impl-card animate-fade-in-up" [routerLink]="['projects', 'fedo-vitals']">
+            <article class="impl-card animate-fade-in-up" [routerLink]="['/', 'projects', 'fedo-vitals']">
               <div class="impl-visual">
                 <div class="impl-demo face-vitals-demo">
                   <div class="face-scanner-wrapper">
@@ -319,7 +318,7 @@ import { ProjectCardComponent } from '../../shared/components/project-card/proje
             </article>
 
             <!-- E-Visa - OCR Document Scanning -->
-            <article class="impl-card animate-fade-in-up stagger-1" [routerLink]="['projects', 'evisa-portal']">
+            <article class="impl-card animate-fade-in-up stagger-1" [routerLink]="['/', 'projects', 'evisa-portal']">
               <div class="impl-visual">
                 <div class="impl-demo ocr-demo">
                   <div class="document-scanner">
@@ -387,7 +386,7 @@ import { ProjectCardComponent } from '../../shared/components/project-card/proje
             </article>
 
             <!-- Exam Admin - Question Bank, Proctoring & Real-time Evaluation -->
-            <article class="impl-card animate-fade-in-up stagger-2" [routerLink]="['projects', 'police-exam-system']">
+            <article class="impl-card animate-fade-in-up stagger-2" [routerLink]="['/', 'projects', 'police-exam-system']">
               <div class="impl-visual">
                 <div class="impl-demo exam-demo">
                   <div class="exam-interface">
@@ -453,7 +452,7 @@ import { ProjectCardComponent } from '../../shared/components/project-card/proje
             </article>
 
             <!-- Fedo HSA - Banking & Insurance -->
-            <article class="impl-card animate-fade-in-up stagger-3" [routerLink]="['projects', 'fedo-hsa']">
+            <article class="impl-card animate-fade-in-up stagger-3" [routerLink]="['/', 'projects', 'fedo-hsa']">
               <div class="impl-visual">
                 <div class="impl-demo banking-demo">
                   <div class="banking-interface">
@@ -509,7 +508,7 @@ import { ProjectCardComponent } from '../../shared/components/project-card/proje
             </article>
 
             <!-- Admin Dashboard - Analytics -->
-            <article class="impl-card animate-fade-in-up stagger-4" [routerLink]="['projects', 'fedo-admin-panel']">
+            <article class="impl-card animate-fade-in-up stagger-4" [routerLink]="['/', 'projects', 'fedo-admin-panel']">
               <div class="impl-visual">
                 <div class="impl-demo dashboard-demo">
                   <div class="dashboard-interface">
